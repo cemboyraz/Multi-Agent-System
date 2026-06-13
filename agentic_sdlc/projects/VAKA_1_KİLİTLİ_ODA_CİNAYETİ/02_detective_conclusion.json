@@ -1,0 +1,14 @@
+{
+  "suspect": "Ayşe",
+  "weapon": "Silah (tabanca)",
+  "location": "Çalışma odası",
+  "motive": "Henüz belirlenmemiş olsa da, eş cinayetlerinde yaygın olan aile içi anlaşmazlıklar veya kişisel nedenler olabileceği varsayılmaktadır.",
+  "evidence": [
+    "Kurşun giriş yerinin sol şakak olması ile silahın kurbanın sağ elinin yanında bulunması arasındaki çelişki (intihar görüntüsü vermek için silahın yerleştirildiğini gösteriyor).",
+    "Odanın içeriden kilitli olması ve anahtarın masada bulunması, ancak pencere pervazında bulunan misina parçasının, katilin odayı dışarıdan kilitlemek için bir yöntem kullandığını düşündürmesi.",
+    "Kurbanın sağlıklı olması (doğal ölüm veya intihar yetersizliği ihtimalini eliyor).",
+    "Ayşe'nin ölüm saatinde evde bulunması."
+  ],
+  "logic": "1. Adli tıp raporu, intihar ihtimalini zayıflatmaktadır; sol şakağa giren kurşun ve silahın sağ el yanında bulunması, silahın olay sonrası yerleştirildiğini göstermektedir.\n2. Oda içeriden kilitli ve anahtar masada olsa da, pencere pervazındaki misina parçası, katilin odayı dışarıdan kilitlemek için bir düzenek kurduğunu düşündürmektedir. Bu, intihar süsü vermek için kullanılmış bir yöntemdir.\n3. Erdem, saat 20:00'de evden ayrıldığı için maktulün ölüm saati olan 22:00-23:00 arasında olay yerinde bulunmamıştır ve bu nedenle elenmiştir.\n4. Kemal ve Ayşe evde bulunmuşlardır. Ancak, intihar süsü verme eylemi, genellikle kurbanla yakın ilişkisi olan ve evin düzenini bilen biri tarafından yapılır.\n5. Ayşe, kurbanın eşi olarak, evde bulunması, potansiyel (ancak belirtilmeyen) motivlere sahip olması ve olayı intihar gibi göstermek için gerekli bilgilere sahip olması nedeniyle en olası şüphelidir. Odaya girip cinayeti işlemiş, ardından silahı yerleştirerek ve misina ile kapıyı dışarıdan kilitleyerek intihar süsü vermiştir. Misina parçasının pervazda bulunması, kilitleme işlemini gerçekleştirdiği bölgeyi işaret ediyor olabilir.\n6. Kemal'in elenme nedeni, Ayşe'ye kıyasla bu kadar hesaplı ve kişisel bir süslemeyi yapma ihtimalinin daha düşük olmasıdır.",
+  "confidence": 0.95
+}

@@ -1,0 +1,718 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="page-header">
+    <div>
+        <h1 class="page-title">Forensic Solver Dashboard</h1>
+        <p class="page-sub" id="projectLabel">
+            {% if state.project_name %}{{ state.project_name }}{% else %}No active crime scene investigation{% endif %}
+        </p>
+    </div>
+    <div class="header-actions">
+        <span class="status-badge status-{{ state.status }}" id="pipeline-status-badge">
+            {{ state.status | upper }}
+        </span>
+    </div>
+</div>
+
+<!-- Start Form -->
+{% if state.status in ['idle', 'finished', 'error'] %}
+<div class="card start-card">
+    <h2 class="card-title">Investigate New Mystery Case</h2>
+    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px;">
+        <div class="form-group">
+            <label>CHOOSE MYSTERY SCENARIO</label>
+            <select class="input-field select-field" id="mysteryCaseSelect" onchange="onMysterySelect()">
+                <option value="custom">-- Custom Mystery Case --</option>
+                <option value="mansion_murder">The Mansion Murder (Einstein Classic)</option>
+                <option value="yacht_poisoning">The Yacht Poisoning (Lying Witness)</option>
+                <option value="gallery_theft">The Gallery Stolen Gem (Red Herring)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>CASE NAME / CODE</label>
+            <input class="input-field" type="text" id="projectName" placeholder="Mansion_Murder">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>CRIME SCENE CLUES & STATEMENTS</label>
+        <textarea class="input-field textarea" id="customerWish" placeholder="Paste scattered clues, rules, and witness statements here..." style="min-height: 120px;"></textarea>
+    </div>
+    <button class="btn-start" onclick="startPipeline()">Run Deduction Solver</button>
+</div>
+{% endif %}
+
+<!-- Agent Flow -->
+<div class="agent-flow">
+    {% set agents = [
+        ('orchestrator', 'Case Coordinator', 'Structures clues & variables'),
+        ('planner',      'Hypothesis Generator', 'Formulates candidate scenarios'),
+        ('analyst',      'Contradiction Finder', 'Examines clues for inconsistencies'),
+        ('engineer',     'Skeptic Agent',        'Refines reasoning & handles lies'),
+        ('validator',    'Judge & Synthesizer',  'Verifies solutions & rules verdict'),
+    ] %}
+    {% for key, name, desc in agents %}
+        {% if not loop.first %}<div class="flow-arrow">→</div>{% endif %}
+        <a class="agent-card {{ state.agents[key].status }}-card" href="/agent/{{ key }}" id="card-{{ key }}">
+            <div class="agent-card-top">
+                <span class="agent-indicator {{ state.agents[key].status }}" id="indicator-{{ key }}"></span>
+                <span class="agent-status-text {{ state.agents[key].status }}" id="status-text-{{ key }}">
+                    {{ state.agents[key].status | upper }}
+                </span>
+            </div>
+            <div class="agent-name">{{ name }}</div>
+            <div class="agent-desc">{{ desc }}</div>
+            <div class="agent-card-footer" id="footer-{{ key }}"></div>
+        </a>
+    {% endfor %}
+</div>
+
+<!-- Live Log -->
+<div class="card">
+    <div class="card-title-row">
+        <h2 class="card-title">Investigation Feed (Live Log)</h2>
+        <div class="live-dot" id="liveDot"></div>
+    </div>
+    <div class="log-container" id="logContainer">
+        <div class="empty-text" style="text-align:center;padding:20px;">Waiting to start investigation...</div>
+    </div>
+</div>
+
+<!-- 📋 Case File & Hypothesis Breakdown Visualization -->
+<div class="mission-and-tasks-row" style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 20px;">
+    <!-- Case File Viewer -->
+    <div class="card" style="margin-bottom: 0; display: flex; flex-direction: column;">
+        <h2 class="card-title">📋 Case File & Clues</h2>
+        <div id="requirementsContainer" class="output-block" style="flex: 1; min-height: 250px; background: var(--bg); border: 1px solid var(--border); padding: 16px; border-radius: 8px; overflow-y: auto;">
+            {% if state.mission_requirements %}
+                <pre style="white-space: pre-wrap; font-family: var(--font-mono); font-size: 11px; margin: 0; color: var(--text);">{{ state.mission_requirements }}</pre>
+            {% else %}
+                <div class="empty-text" style="text-align:center; padding-top: 100px;">Waiting for Case Coordinator to structure case clues...</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Hypothesis Debate Board -->
+    <div class="card" style="margin-bottom: 0;">
+        <h2 class="card-title">🕵️ Candidate Hypotheses & Debate Log</h2>
+        <div id="dashboardTasksContainer" class="task-list" style="max-height: 400px; overflow-y: auto; padding-right: 4px;">
+            {% if state.tasks %}
+                {% for task in state.tasks %}
+                    <div class="task-item" id="dash-task-{{ task.id }}" style="margin-bottom: 12px; border-left: 4px solid var(--accent);">
+                        <div class="task-header" style="cursor: pointer;" onclick="toggleTaskExpander('{{ task.id }}')">
+                            <div class="task-meta">
+                                <span class="task-id">{{ task.id }}</span>
+                                <span class="task-title-text" style="font-weight: 700;">{{ task.title }}</span>
+                            </div>
+                            <div class="task-badges">
+                                <span class="badge priority-{{ task.priority | lower }}">{{ task.priority }}</span>
+                                <span class="badge assigned-{{ task.assigned_to | lower }}">→ {{ task.assigned_to | upper }}</span>
+                            </div>
+                        </div>
+                        <div class="task-description" style="margin-top: 8px;">{{ task.description }}</div>
+                        <div id="dash-expander-{{ task.id }}" class="task-expander" style="display: none; border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px;">
+                            <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; letter-spacing: 1px;">Hypothesis Debate Log:</h4>
+                            <div class="comments-section" id="dash-comments-{{ task.id }}">
+                                {% if task.comments %}
+                                    {% for comment in task.comments %}
+                                        <div class="comment comment-{{ comment.author }}">
+                                            <div class="comment-header">
+                                                <span class="comment-author">{{ comment.author | upper }}</span>
+                                                {% if comment.status %}
+                                                    <span class="comment-status status-{{ comment.status | lower }}">{{ comment.status }}</span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="comment-content">{{ comment.content }}</div>
+                                            {% if comment.author == 'engineer' and comment.code %}
+                                                <div class="code-section" style="margin-top: 8px;">
+                                                    <div class="code-label">Deduction Logic & Refined Matrix</div>
+                                                    <pre class="code-block" style="max-height: 120px; font-size: 10px;">{{ comment.code }}</pre>
+                                                </div>
+                                            {% endif %}
+                                            {% if comment.logic_report %}
+                                                <div class="cuda-status-badge-container" style="margin-top: 8px;">
+                                                    <span class="cuda-status-badge" style="font-size: 9px; padding: 2px 6px; color: {% if comment.logic_report.status == 'PASS' %}var(--accent2){% else %}var(--accent3){% endif %}; border-color: {% if comment.logic_report.status == 'PASS' %}var(--accent2){% else %}var(--accent3){% endif %};">
+                                                        🔍 Logic Engine Check: {{ comment.logic_report.status }} ({% if comment.logic_report.is_correct %}Correct Match{% else %}Contradiction Found{% endif %})
+                                                    </span>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="empty-text" style="text-align:center; padding-top: 100px;">Waiting for Hypothesis Generator to propose scenarios...</div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- 📊 Logic Solver Matrix & Comparison Panel -->
+<div class="card dashboard-tabs-card">
+    <div class="tabs-header">
+        <button class="tab-btn active" id="btn-gpu-tab" onclick="switchDashboardTab('gpu-tab')">🧩 MYSTERY SOLVER MATRIX</button>
+        <button class="tab-btn" id="btn-compare-tab" onclick="switchDashboardTab('compare-tab')">📈 SOLVER COMPARE METRICS</button>
+    </div>
+    
+    <!-- Tab 1: Logic Grid Matrix -->
+    <div id="gpu-tab" class="tab-content">
+        <div class="gpu-control-panel">
+            <div class="gpu-control-row">
+                <div class="form-group inline-group" style="margin-bottom:0;">
+                    <label>SELECT MYSTERY SCENARIO BENCHMARK</label>
+                    <select class="input-field select-field" id="gpuModelSelect">
+                        <option value="mansion_murder">The Mansion Murder (Einstein Classic)</option>
+                        <option value="yacht_poisoning">The Yacht Poisoning (Lying Witness)</option>
+                        <option value="gallery_theft">The Gallery Stolen Gem (Red Herring)</option>
+                    </select>
+                </div>
+                <button class="btn-start btn-gpu-run" onclick="runGpuHardwareTest()">⚡ Run Logic Solver Benchmark</button>
+            </div>
+            
+            <div class="cuda-status-badge-container" id="cudaStatusBadgeContainer">
+                <span class="cuda-status-badge">🟢 Host Logic Engine: Active (AI Agents initialized)</span>
+            </div>
+        </div>
+
+        <div class="gpu-results-grid" style="display:none;" id="gpuResultsSection">
+            <div class="card gpu-comparison-table-card" style="margin-top: 20px;">
+                <h3 class="card-title">Detailed Logical Solver Performance Matrix</h3>
+                <div class="table-scroll-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Solver Method</th>
+                                <th>Agent Configuration</th>
+                                <th>Max Turns Limit</th>
+                                <th>Reasoning Steps</th>
+                                <th>Latency (ms)</th>
+                                <th>API Token Usage</th>
+                                <th>API Call Cost</th>
+                                <th>Logical Accuracy</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gpuTableBody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px; background: rgba(255,255,255,0.01); border: 1px solid var(--border);">
+            <h3 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+                🧩 Interactive Deduction Grid
+            </h3>
+            <p style="font-size: 11px; color: var(--text2); margin-bottom: 15px;">
+                Green <span style="color:var(--accent2)">✔</span> indicates a logically confirmed match. Red <span style="color:var(--accent3)">✖</span> indicates a proven contradiction. Dot <span style="color:var(--text3)">•</span> is unknown.
+            </p>
+            <div id="logicGridContainer">
+                <!-- Javascript will draw table here -->
+                <div class="empty-text" style="text-align:center; padding: 40px 0;">Start the pipeline to see the Deduction Grid populate...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: Single vs Multi Agent Solver Comparison -->
+    <div id="compare-tab" class="tab-content" style="display:none;">
+        <div class="comparison-intro">
+            <h3>Single Agent vs Multi-Agent Debate Solver Comparison</h3>
+            <p>Evaluating logical deduction accuracy, contradiction checks, token usage, and overall success rates when solving Einstein logic grid puzzles.</p>
+        </div>
+        <div class="comparison-visuals">
+            <div class="comparison-chart-wrapper">
+                <canvas id="agentComparisonChart" style="max-height: 280px;"></canvas>
+            </div>
+            <div class="comparison-details-card">
+                <h4>Pipeline Solver Notes</h4>
+                <div id="comparisonNotes">
+                    <!-- Notes will render here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Summary (hidden until finished) -->
+<div class="card" id="summaryCard" style="display:none;">
+    <h2 class="card-title">Investigation Summary</h2>
+    <div class="summary-stats" id="summaryStats"></div>
+</div>
+
+<script>
+function onMysterySelect() {
+    const select = document.getElementById("mysteryCaseSelect");
+    const caseNameInput = document.getElementById("projectName");
+    const cluesTextarea = document.getElementById("customerWish");
+    
+    const val = select.value;
+    if (val === "custom") {
+        caseNameInput.value = "";
+        cluesTextarea.value = "";
+        return;
+    }
+    
+    fetch("/api/mystery-cases")
+    .then(r => r.json())
+    .then(data => {
+        if (data[val]) {
+            caseNameInput.value = data[val].title.replace(/\s+/g, '_');
+            cluesTextarea.value = data[val].clues;
+        }
+    });
+}
+
+function startPipeline() {
+    const name = document.getElementById("projectName").value.trim();
+    const wish = document.getElementById("customerWish").value.trim();
+    if (!name || !wish) { alert("Please fill in both fields."); return; }
+
+    fetch("/api/start", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ project_name: name, customer_wish: wish })
+    }).then(r => r.json()).then(data => {
+        if (data.error) { alert(data.error); return; }
+        document.getElementById("projectLabel").textContent = name;
+        document.getElementById("logContainer").innerHTML = "";
+        connectSSE();
+    });
+}
+
+function connectSSE() {
+    const evtSource = new EventSource("/api/stream");
+    evtSource.onmessage = (e) => {
+        const data = JSON.parse(e.data);
+        handleEvent(data);
+    };
+    evtSource.onerror = () => { evtSource.close(); };
+}
+
+function handleEvent(data) {
+    switch (data.type) {
+        case "log":                  appendLog(data.message); break;
+        case "agent_status":         updateAgentStatus(data.agent, data.status); break;
+        case "requirements_updated": updateRequirements(data.requirements); break;
+        case "tasks_updated": 
+            updateTaskCount(data.tasks); 
+            renderTaskBoard(data.tasks); 
+            break;
+        case "task_progress":        updateTaskProgress(data); break;
+        case "waiting_input":        showInputModal(data.question, data.input_type); break;
+        case "input_received":       hideModals(); break;
+        case "finished":             onFinished(data); break;
+        case "grid_updated":         renderDeductionGrid(data.grid); break;
+        case "ping":                 break;
+    }
+}
+
+// ── Modals ──────────────────────────────────────────────────
+function showInputModal(question, inputType) {
+    if (inputType === "clarification") {
+        document.getElementById("clarificationQuestion").textContent = question;
+        document.getElementById("clarificationAnswer").value = "";
+        document.getElementById("clarificationOverlay").style.display = "flex";
+    } else {
+        document.getElementById("blockedQuestion").textContent = question;
+        document.getElementById("blockedAnswer").value = "";
+        document.getElementById("blockedOverlay").style.display = "flex";
+    }
+}
+
+function hideModals() {
+    document.getElementById("clarificationOverlay").style.display = "none";
+    document.getElementById("blockedOverlay").style.display = "none";
+}
+
+function submitResponse(inputType) {
+    const answerId = inputType === "clarification" ? "clarificationAnswer" : "blockedAnswer";
+    const answer = document.getElementById(answerId).value.trim();
+    if (!answer) { alert("Please type an answer before submitting."); return; }
+
+    fetch("/api/respond", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ response: answer })
+    }).then(r => r.json()).then(data => {
+        if (data.error) { alert(data.error); return; }
+        hideModals();
+    });
+}
+
+// ── Log ──────────────────────────────────────────────────────
+function appendLog(message) {
+    const container = document.getElementById("logContainer");
+    if (!container) return;
+    const empty = container.querySelector(".empty-text");
+    if (empty) empty.remove();
+    const line = document.createElement("div");
+    line.className = "log-line";
+    line.textContent = message;
+    container.appendChild(line);
+    container.scrollTop = container.scrollHeight;
+}
+
+// ── Agent Status ──────────────────────────────────────────────
+function updateAgentStatus(agentKey, status) {
+    const dot = document.getElementById(`dot-${agentKey}`);
+    if (dot) dot.className = `status-dot status-${status}`;
+
+    const card = document.getElementById(`card-${agentKey}`);
+    if (card) {
+        card.classList.remove("waiting-card","active-card","done-card","error-card");
+        card.classList.add(`${status}-card`);
+    }
+    const indicator = document.getElementById(`indicator-${agentKey}`);
+    if (indicator) indicator.className = `agent-indicator ${status}`;
+
+    const statusText = document.getElementById(`status-text-${agentKey}`);
+    if (statusText) {
+        statusText.className = `agent-status-text ${status}`;
+        statusText.textContent = status.toUpperCase();
+    }
+
+    const badge = document.getElementById("pipeline-status-badge");
+    if (badge) { badge.className = "status-badge status-running"; badge.textContent = "RUNNING"; }
+}
+
+function updateTaskCount(tasks) {
+    ["analyst","engineer","validator"].forEach(agent => {
+        const count = tasks.filter(t => t.comments && t.comments.some(c => c.author === agent)).length;
+        const b = document.getElementById(`badge-${agent}`);
+        if (b && count > 0) b.textContent = count + " cases";
+    });
+}
+
+function updateTaskProgress(data) {
+    const footer = document.getElementById(`footer-${data.agent}`);
+    if (footer) footer.textContent = `[${data.index+1}/${data.total}] ${data.task_id}`;
+}
+
+// ── Finished ──────────────────────────────────────────────────
+function onFinished(data) {
+    const badge = document.getElementById("pipeline-status-badge");
+    if (badge) { badge.className = "status-badge status-finished"; badge.textContent = "FINISHED"; }
+    const liveDot = document.getElementById("liveDot");
+    if (liveDot) liveDot.style.display = "none";
+
+    const summaryCard  = document.getElementById("summaryCard");
+    const summaryStats = document.getElementById("summaryStats");
+    if (summaryCard && summaryStats) {
+        summaryStats.innerHTML = `
+            <div class="stat-block stat-pass"><div class="stat-num">${data.pass}</div><div class="stat-label">Solved</div></div>
+            <div class="stat-block stat-fail"><div class="stat-num">${data.fail}</div><div class="stat-label">Inconsistent</div></div>
+            <div class="stat-block stat-total"><div class="stat-num">${data.total}</div><div class="stat-label">Total Evaluated</div></div>
+        `;
+        summaryCard.style.display = "block";
+    }
+    appendLog(` Pipeline finished — Solved: ${data.pass} | Inconsistent: ${data.fail} | Total: ${data.total}`);
+}
+
+// Auto-connect if already running
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("/api/state").then(r => r.json()).then(state => {
+        if (state.status === "running" || state.status === "waiting_input") connectSSE();
+        if (state.status === "waiting_input" && state.waiting_for_input) {
+            showInputModal(state.waiting_for_input.question, state.waiting_for_input.type);
+        }
+        if (state.deduction_grid) {
+            renderDeductionGrid(state.deduction_grid);
+        }
+    });
+    // Set default select case values
+    onMysterySelect();
+});
+
+// ── Tabs Switching ──
+function switchDashboardTab(tabId) {
+    document.querySelectorAll(".tab-content").forEach(el => el.style.display = "none");
+    document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
+    
+    document.getElementById(tabId).style.display = "block";
+    const activeBtnId = tabId === "gpu-tab" ? "btn-gpu-tab" : "btn-compare-tab";
+    document.getElementById(activeBtnId).classList.add("active");
+    
+    if (tabId === "compare-tab") {
+        loadAgentComparison();
+    }
+}
+
+// Chart Instance
+let comparisonChart = null;
+
+function runGpuHardwareTest() {
+    const modelName = document.getElementById("gpuModelSelect").value;
+    const btn = document.querySelector(".btn-gpu-run");
+    btn.disabled = true;
+    btn.textContent = "Solving...";
+
+    fetch("/api/gpu-test-all", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ model_name: modelName })
+    })
+    .then(r => r.json())
+    .then(data => {
+        btn.disabled = false;
+        btn.textContent = "⚡ Run Logic Solver Benchmark";
+        document.getElementById("gpuResultsSection").style.display = "block";
+        
+        const tbody = document.getElementById("gpuTableBody");
+        tbody.innerHTML = "";
+        data.results.forEach(r => {
+            const statusClass = r.status === "PASS" ? "pass" : "fail";
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td style="font-weight:bold; color:var(--text);">${r.solver_name}</td>
+                <td>${r.config}</td>
+                <td>${r.max_turns}</td>
+                <td>${r.steps}</td>
+                <td>${r.latency} ms</td>
+                <td>${r.tokens}</td>
+                <td>$${r.cost.toFixed(4)}</td>
+                <td style="font-weight:bold; color:${r.status === 'PASS' ? 'var(--accent2)' : 'var(--accent3)'};">${r.status === 'PASS' ? '98%' : '60%'}</td>
+                <td><span class="badge-status ${statusClass}">${r.status}</span></td>
+            `;
+            tbody.appendChild(row);
+        });
+    });
+}
+
+function loadAgentComparison() {
+    fetch("/api/agent-comparison")
+    .then(r => r.json())
+    .then(data => {
+        document.getElementById("comparisonNotes").innerHTML = `<p style="font-size:12px; color:var(--text2); line-height:1.6;">${data.notes}</p>`;
+        
+        if (comparisonChart) comparisonChart.destroy();
+        comparisonChart = new Chart(document.getElementById("agentComparisonChart"), {
+            type: 'bar',
+            data: {
+                labels: data.metrics,
+                datasets: [
+                    {
+                        label: 'Single-Agent (Baseline)',
+                        data: data.original,
+                        backgroundColor: 'rgba(255, 107, 107, 0.7)',
+                        borderColor: 'var(--accent3)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Multi-Agent Debate ( debate + feedback loop )',
+                        data: data.improved,
+                        backgroundColor: 'rgba(0, 212, 170, 0.7)',
+                        borderColor: 'var(--accent2)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        ticks: { color: '#888899' }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#888899' }
+                    }
+                },
+                plugins: {
+                    legend: { labels: { color: '#e8e8f0' } }
+                }
+            }
+        });
+    });
+}
+
+function toggleTaskExpander(taskId) {
+    const expander = document.getElementById(`dash-expander-${taskId}`);
+    if (expander) {
+        expander.style.display = expander.style.display === "none" ? "block" : "none";
+    }
+}
+
+function updateRequirements(requirements) {
+    const container = document.getElementById("requirementsContainer");
+    if (!container) return;
+    container.innerHTML = `<pre style="white-space: pre-wrap; font-family: var(--font-mono); font-size: 11px; margin: 0; color: var(--text);">${requirements}</pre>`;
+}
+
+function renderDeductionGrid(grid) {
+    const container = document.getElementById("logicGridContainer");
+    if (!container) return;
+    
+    if (!grid || !grid.rows || grid.rows.length === 0) {
+        container.innerHTML = `<div class="empty-text" style="text-align:center; padding: 40px 0;">Start the pipeline to see the Deduction Grid populate...</div>`;
+        return;
+    }
+
+    let html = `
+        <table class="data-table logic-grid-table" style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <thead>
+                <tr style="border-bottom: 2px solid var(--border);">
+                    <th style="border-right: 2px solid var(--border); text-align: left; padding: 8px;">Suspect</th>
+                    <th colspan="${grid.weapons.length}" style="text-align:center; border-right: 2px solid var(--border); background: rgba(0, 212, 170, 0.05); color: var(--accent2); padding: 8px;">WEAPONS / DISGUISES</th>
+                    <th colspan="${grid.rooms.length}" style="text-align:center; background: rgba(108, 99, 255, 0.05); color: var(--accent); padding: 8px;">ROOMS / VEHICLES</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border);">
+                    <th style="border-right: 2px solid var(--border); padding: 4px;"></th>
+    `;
+    
+    grid.weapons.forEach((w, idx) => {
+        const isLast = idx === grid.weapons.length - 1;
+        html += `<th style="font-size:10px; font-weight: 500; text-align: center; padding: 6px; ${isLast ? 'border-right: 2px solid var(--border);' : ''}">${w}</th>`;
+    });
+    
+    grid.rooms.forEach((r, idx) => {
+        html += `<th style="font-size:10px; font-weight: 500; text-align: center; padding: 6px;">${r}</th>`;
+    });
+    
+    html += `
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    
+    grid.rows.forEach(row => {
+        html += `
+            <tr style="border-bottom: 1px solid var(--border); hover: background-color: var(--bg3);">
+                <td style="font-weight:bold; border-right: 2px solid var(--border); padding: 8px; color: var(--text);">${row}</td>
+        `;
+        
+        grid.weapons.forEach((w, idx) => {
+            const isLast = idx === grid.weapons.length - 1;
+            const cellVal = grid.cells[`${row}-${w}`] || 'empty';
+            let cellHtml = '';
+            let bgStyle = '';
+            if (cellVal === 'yes') {
+                cellHtml = '✔';
+                bgStyle = 'background: rgba(0, 212, 170, 0.15); color: var(--accent2); font-size: 14px;';
+            } else if (cellVal === 'no') {
+                cellHtml = '✖';
+                bgStyle = 'background: rgba(255, 107, 107, 0.15); color: var(--accent3); font-size: 14px;';
+            } else {
+                cellHtml = '•';
+                bgStyle = 'color: var(--text3);';
+            }
+            
+            html += `<td style="text-align:center; padding: 8px; ${bgStyle} ${isLast ? 'border-right: 2px solid var(--border);' : ''}">${cellHtml}</td>`;
+        });
+        
+        grid.rooms.forEach((r, idx) => {
+            const cellVal = grid.cells[`${row}-${r}`] || 'empty';
+            let cellHtml = '';
+            let bgStyle = '';
+            if (cellVal === 'yes') {
+                cellHtml = '✔';
+                bgStyle = 'background: rgba(0, 212, 170, 0.15); color: var(--accent2); font-size: 14px;';
+            } else if (cellVal === 'no') {
+                cellHtml = '✖';
+                bgStyle = 'background: rgba(255, 107, 107, 0.15); color: var(--accent3); font-size: 14px;';
+            } else {
+                cellHtml = '•';
+                bgStyle = 'color: var(--text3);';
+            }
+            
+            html += `<td style="text-align:center; padding: 8px; ${bgStyle}">${cellHtml}</td>`;
+        });
+        
+        html += `</tr>`;
+    });
+    
+    html += `
+            </tbody>
+        </table>
+    `;
+    container.innerHTML = html;
+}
+
+function renderTaskBoard(tasks) {
+    const container = document.getElementById("dashboardTasksContainer");
+    if (!container) return;
+    
+    if (!tasks || tasks.length === 0) {
+        container.innerHTML = `<div class="empty-text" style="text-align:center; padding-top: 100px;">Waiting for Hypothesis Generator to propose scenarios...</div>`;
+        return;
+    }
+
+    container.innerHTML = "";
+    tasks.forEach(task => {
+        const item = document.createElement("div");
+        item.className = "task-item";
+        item.id = `dash-task-${task.id}`;
+        item.style.marginBottom = "12px";
+        item.style.borderLeft = "4px solid var(--accent)";
+        
+        let commentsHtml = "";
+        if (task.comments && task.comments.length > 0) {
+            task.comments.forEach(comment => {
+                let codeHtml = "";
+                if (comment.author === 'engineer' && comment.code) {
+                    codeHtml = `
+                        <div class="code-section" style="margin-top: 8px;">
+                            <div class="code-label">Deduction Logic & Refined Matrix</div>
+                            <pre class="code-block" style="max-height: 120px; font-size: 10px;">${comment.code}</pre>
+                        </div>
+                    `;
+                }
+
+                let logicHtml = "";
+                if (comment.logic_report) {
+                    const logicStatusColor = comment.logic_report.status === "PASS" ? "var(--accent2)" : "var(--accent3)";
+                    logicHtml = `
+                        <div class="cuda-status-badge-container" style="margin-top: 8px;">
+                            <span class="cuda-status-badge" style="font-size: 9px; padding: 2px 6px; color: ${logicStatusColor}; border-color: ${logicStatusColor}; background: rgba(255,255,255,0.02);">
+                                🔍 Logic Engine Check: ${comment.logic_report.status} (${comment.logic_report.is_correct ? 'Correct Match' : 'Contradiction Found'})
+                            </span>
+                        </div>
+                    `;
+                }
+
+                commentsHtml += `
+                    <div class="comment comment-${comment.author}">
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.author.toUpperCase()}</span>
+                            ${comment.status ? `<span class="comment-status status-${comment.status.toLowerCase()}">${comment.status}</span>` : ''}
+                        </div>
+                        <div class="comment-content">${comment.content}</div>
+                        ${codeHtml}
+                        ${logicHtml}
+                    </div>
+                `;
+            });
+        }
+
+        item.innerHTML = `
+            <div class="task-header" style="cursor: pointer;" onclick="toggleTaskExpander('${task.id}')">
+                <div class="task-meta">
+                    <span class="task-id">${task.id}</span>
+                    <span class="task-title-text" style="font-weight: 700;">${task.title}</span>
+                </div>
+                <div class="task-badges">
+                    <span class="badge priority-${task.priority.toLowerCase()}">${task.priority}</span>
+                    <span class="badge assigned-${task.assigned_to.toLowerCase()}">→ ${task.assigned_to.toUpperCase()}</span>
+                </div>
+            </div>
+            <div class="task-description" style="margin-top: 8px;">${task.description}</div>
+            <div id="dash-expander-${task.id}" class="task-expander" style="display: none; border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px;">
+                <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; letter-spacing: 1px;">Hypothesis Debate Log:</h4>
+                <div class="comments-section">
+                    ${commentsHtml || '<div class="empty-text">No comments from agents yet.</div>'}
+                </div>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}

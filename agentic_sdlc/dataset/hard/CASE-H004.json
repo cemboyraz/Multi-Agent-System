@@ -1,0 +1,205 @@
+{
+  "puzzle_id": "CASE-H004",
+  "n": 5,
+  "suspects": [
+    "Colonel Mustard",
+    "Miss Scarlet",
+    "Dr. Orchid",
+    "Lady Lavender",
+    "Mrs. Peacock"
+  ],
+  "weapons": [
+    "Dagger",
+    "Poison",
+    "Revolver",
+    "Candlestick",
+    "Wrench"
+  ],
+  "rooms": [
+    "Cellar",
+    "Ballroom",
+    "Greenhouse",
+    "Kitchen",
+    "Conservatory"
+  ],
+  "solution": {
+    "Colonel Mustard": {
+      "weapon": "Poison",
+      "room": "Conservatory"
+    },
+    "Miss Scarlet": {
+      "weapon": "Wrench",
+      "room": "Greenhouse"
+    },
+    "Dr. Orchid": {
+      "weapon": "Dagger",
+      "room": "Kitchen"
+    },
+    "Lady Lavender": {
+      "weapon": "Revolver",
+      "room": "Cellar"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Candlestick",
+      "room": "Ballroom"
+    }
+  },
+  "murder_weapon": "Candlestick",
+  "culprit": "Mrs. Peacock",
+  "clues": [
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Kitchen",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "weapon",
+      "b_val": "Revolver",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "hard"
+}

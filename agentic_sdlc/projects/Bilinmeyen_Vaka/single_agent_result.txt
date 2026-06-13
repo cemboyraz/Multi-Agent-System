@@ -1,0 +1,33 @@
+"VAKA DOSYASI:
+
+Aşağıdaki bilgileri kullanarak bir cinayet gizemini çözün:
+
+Kurban: Bayan Eleanor Vance
+Ölüm Nedeni: Kafa travması
+Mevcut Kanıtlar:
+1. Kan lekeli bir altın kaplama şamdan, şamdanın üzerine ince bir toz tabakası serpilmiş gibi görünüyordu.
+2. Bayan Vance'in odasında, yatağın ayakucunda, yırtılmış bir ipek eşarp bulundu.
+3. Olay yerinde bulunan parmak izleri, evin hizmetçisi olan Bayan Gable'a ait.
+4. Olay yerinde bulunan ayak izleri, Bayan Vance'in yeğeni olan Bayan Sterling'e ait.
+5. Olay yerinde bulunan bir saç teli, Bayan Vance'in kocası Bay Vance'e ait.
+6. Olay yerinde bulunan bir kan lekesi, Bayan Vance'in kanıyla eşleşti.
+7. Olay yerinde bulunan bir ipek eşarp, Bayan Vance'in gardırobundan eksik olanla eşleşti.
+8. Olay yerinde bulunan bir altın kaplama şamdan, Bayan Vance'in şöminesinde duruyordu.
+9. Olay yerinde bulunan bir toz tabakası, Bayan Vance'in toz beziyle temizlediği tozla eşleşti.
+10. Olay yerinde bulunan bir ipek eşarp, Bayan Vance'in odasında bulundu.
+
+Şüpheliler:
+* Bay Vance (Bayan Vance'in kocası)
+* Bayan Sterling (Bayan Vance'in yeğeni)
+* Bayan Gable (Bayan Vance'in hizmetçisi)
+
+Olası Silahlar:
+* Altın kaplama şamdan
+* İpek eşarp
+
+Olası Odalar:
+* Yatak odası
+* Oturma odası
+* Mutfak
+
+Bulgularınızı bir JSON nesnesi olarak çıktı alın."

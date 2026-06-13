@@ -1,0 +1,205 @@
+{
+  "puzzle_id": "CASE-H002",
+  "n": 5,
+  "suspects": [
+    "Dr. Orchid",
+    "Miss Scarlet",
+    "Mr. Green",
+    "Reverend Gray",
+    "Lady Lavender"
+  ],
+  "weapons": [
+    "Dagger",
+    "Lead Pipe",
+    "Wrench",
+    "Revolver",
+    "Poison"
+  ],
+  "rooms": [
+    "Cellar",
+    "Billiard Room",
+    "Ballroom",
+    "Conservatory",
+    "Kitchen"
+  ],
+  "solution": {
+    "Dr. Orchid": {
+      "weapon": "Revolver",
+      "room": "Kitchen"
+    },
+    "Miss Scarlet": {
+      "weapon": "Wrench",
+      "room": "Conservatory"
+    },
+    "Mr. Green": {
+      "weapon": "Lead Pipe",
+      "room": "Ballroom"
+    },
+    "Reverend Gray": {
+      "weapon": "Poison",
+      "room": "Cellar"
+    },
+    "Lady Lavender": {
+      "weapon": "Dagger",
+      "room": "Billiard Room"
+    }
+  },
+  "murder_weapon": "Wrench",
+  "culprit": "Miss Scarlet",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "room",
+      "b_val": "Billiard Room",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "weapon",
+      "b_val": "Lead Pipe",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": true
+    }
+  ],
+  "difficulty": "hard"
+}

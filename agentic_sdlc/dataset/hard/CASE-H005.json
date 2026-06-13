@@ -1,0 +1,241 @@
+{
+  "puzzle_id": "CASE-H005",
+  "n": 5,
+  "suspects": [
+    "Miss Scarlet",
+    "Mrs. Peacock",
+    "Dr. Orchid",
+    "Mr. Green",
+    "Professor Plum"
+  ],
+  "weapons": [
+    "Wrench",
+    "Lead Pipe",
+    "Poison",
+    "Dagger",
+    "Candlestick"
+  ],
+  "rooms": [
+    "Kitchen",
+    "Ballroom",
+    "Greenhouse",
+    "Library",
+    "Conservatory"
+  ],
+  "solution": {
+    "Miss Scarlet": {
+      "weapon": "Candlestick",
+      "room": "Ballroom"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Poison",
+      "room": "Kitchen"
+    },
+    "Dr. Orchid": {
+      "weapon": "Lead Pipe",
+      "room": "Greenhouse"
+    },
+    "Mr. Green": {
+      "weapon": "Dagger",
+      "room": "Conservatory"
+    },
+    "Professor Plum": {
+      "weapon": "Wrench",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Poison",
+  "culprit": "Mrs. Peacock",
+  "clues": [
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "weapon",
+      "b_val": "Candlestick",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "room",
+      "b_val": "Kitchen",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Library",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "hard"
+}

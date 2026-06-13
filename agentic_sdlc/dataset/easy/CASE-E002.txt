@@ -1,0 +1,19 @@
+A murder has been committed at the manor. There are 3 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Reverend Gray, Miss Scarlet, Lady Lavender
+WEAPONS:  Revolver, Crossbow, Rope
+ROOMS:    Ballroom, Billiard Room, Conservatory
+
+The victim was killed with the ROPE. The murderer is therefore the suspect who carried the rope.
+
+CLUES (all clues are factually true):
+  1. Reverend Gray was not in the Billiard Room.
+  2. Whoever carried the revolver did not go into the Conservatory.
+  3. Whoever carried the crossbow also was in the Ballroom.
+  4. Reverend Gray did not carry the rope.
+  5. Miss Scarlet did not carry the rope.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Lady Lavender", "weapon": "Rope", "room": "Conservatory"}

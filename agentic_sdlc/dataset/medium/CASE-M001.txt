@@ -1,0 +1,26 @@
+A murder has been committed at the manor. There are 4 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Mrs. Peacock, Dr. Orchid, Miss Scarlet, Lady Lavender
+WEAPONS:  Dagger, Revolver, Poison, Lead Pipe
+ROOMS:    Ballroom, Library, Kitchen, Greenhouse
+
+The victim was killed with the REVOLVER. The murderer is therefore the suspect who carried the revolver.
+
+CLUES (all clues are factually true):
+  1. Miss Scarlet was not in the Library.
+  2. Miss Scarlet was not in the Greenhouse.
+  3. Whoever was in the Library also carried the poison.
+  4. Whoever carried the lead pipe did not go into the Ballroom.
+  5. Lady Lavender was not in the Ballroom.
+  6. Dr. Orchid was not in the Greenhouse.
+  7. Dr. Orchid was not in the Kitchen.
+  8. Mrs. Peacock was not in the Greenhouse.
+  9. Mrs. Peacock was not in the Library.
+  10. Miss Scarlet was not in the Kitchen.
+  11. Mrs. Peacock did not carry the lead pipe.
+  12. Miss Scarlet did not carry the revolver.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Mrs. Peacock", "weapon": "Revolver", "room": "Kitchen"}

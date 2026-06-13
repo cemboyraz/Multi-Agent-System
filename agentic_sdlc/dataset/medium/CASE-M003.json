@@ -1,0 +1,153 @@
+{
+  "puzzle_id": "CASE-M003",
+  "n": 4,
+  "suspects": [
+    "Miss Scarlet",
+    "Professor Plum",
+    "Dr. Orchid",
+    "Lady Lavender"
+  ],
+  "weapons": [
+    "Rope",
+    "Crossbow",
+    "Candlestick",
+    "Wrench"
+  ],
+  "rooms": [
+    "Library",
+    "Study",
+    "Kitchen",
+    "Cellar"
+  ],
+  "solution": {
+    "Miss Scarlet": {
+      "weapon": "Crossbow",
+      "room": "Library"
+    },
+    "Professor Plum": {
+      "weapon": "Wrench",
+      "room": "Kitchen"
+    },
+    "Dr. Orchid": {
+      "weapon": "Rope",
+      "room": "Cellar"
+    },
+    "Lady Lavender": {
+      "weapon": "Candlestick",
+      "room": "Study"
+    }
+  },
+  "murder_weapon": "Crossbow",
+  "culprit": "Miss Scarlet",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "room",
+      "b_val": "Kitchen",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "weapon",
+      "b_val": "Crossbow",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

@@ -1,0 +1,40 @@
+## Mission Requirements Analysis:
+
+**Robot Capabilities & Constraints:**
+
+*   **Mobility:** Must navigate through narrow spaces (implying a compact, possibly articulated or tracked design). Needs to traverse rubble, uneven terrain, and potentially climb over obstacles.
+*   **Durability:** Must withstand dust, debris, and potential impacts from falling objects. Sealing and robust construction are critical.
+*   **Battery Limits:** 4 hours of mission life. This dictates power consumption targets for all systems (motors, sensors, communication, processing).
+*   **Communication Limits:** Likely to be intermittent and low-bandwidth due to structural damage and interference. Redundant communication methods (e.g., mesh networking, satellite backup) might be considered if feasible within power constraints, but primary focus should be on robust, low-power local communication.
+*   **Environmental Hazards:**
+    *   **Dust:** Significant ingress protection required for all components.
+    *   **Structural Instability:** Risk of further collapse, requiring careful navigation and avoidance.
+    *   **Potential Gas Leaks:** necessitates gas sensors.
+    *   **Limited Visibility:** necessitates thermal cameras.
+*   **Sensor Reliability:** Sensors must function accurately in a high-dust, potentially low-light, and vibration-prone environment. Calibration and self-diagnosis capabilities would be beneficial.
+
+**Downstream Agent Focus Areas:**
+
+*   **Mobility System Design:** Selecting appropriate locomotion (e.g., tracked, legged, hybrid) for rubble and confined spaces.
+*   **Durability & Environmental Sealing:** Designing for dust ingress protection (IP rating) and impact resistance.
+*   **Power Management:** Optimizing battery usage for 4-hour endurance, considering sensor power draw, motor efficiency, and communication.
+*   **Sensor Suite Integration:** Implementing and ensuring reliability of thermal cameras and gas sensors in the specified environment.
+*   **Communication System:** Designing a robust, low-power communication strategy suitable for disaster zones.
+*   **Navigation & Control:** Developing algorithms for autonomous or semi-autonomous navigation through complex, uncertain terrain.
+
+---
+
+## mission_requirements.txt
+
+**Robot Type:** Search and Rescue, Earthquake Disaster Environment
+
+**Key Requirements:**
+
+*   **Mobility:** Capable of navigating narrow spaces, rubble, and uneven terrain.
+*   **Durability:** High resistance to dust ingress and physical impact.
+*   **Sensors:**
+    *   Thermal Camera (for detecting heat signatures)
+    *   Gas Sensors (for detecting hazardous gases)
+*   **Power:** Minimum 4 hours of operational life.
+*   **Communication:** Robust, low-power communication suitable for degraded environments.
+*   **Environmental:** Must operate in dusty, debris-filled conditions.

@@ -1,0 +1,214 @@
+{
+  "puzzle_id": "CASE-H006",
+  "n": 5,
+  "suspects": [
+    "Miss Scarlet",
+    "Dr. Orchid",
+    "Colonel Mustard",
+    "Lady Lavender",
+    "Mrs. Peacock"
+  ],
+  "weapons": [
+    "Crossbow",
+    "Lead Pipe",
+    "Candlestick",
+    "Rope",
+    "Revolver"
+  ],
+  "rooms": [
+    "Library",
+    "Greenhouse",
+    "Cellar",
+    "Study",
+    "Kitchen"
+  ],
+  "solution": {
+    "Miss Scarlet": {
+      "weapon": "Crossbow",
+      "room": "Study"
+    },
+    "Dr. Orchid": {
+      "weapon": "Rope",
+      "room": "Cellar"
+    },
+    "Colonel Mustard": {
+      "weapon": "Candlestick",
+      "room": "Kitchen"
+    },
+    "Lady Lavender": {
+      "weapon": "Revolver",
+      "room": "Greenhouse"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Lead Pipe",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Crossbow",
+  "culprit": "Miss Scarlet",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Kitchen",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "weapon",
+      "b_val": "Revolver",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "weapon",
+      "b_val": "Candlestick",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "hard"
+}

@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E007",
+  "n": 3,
+  "suspects": [
+    "Colonel Mustard",
+    "Reverend Gray",
+    "Mr. Green"
+  ],
+  "weapons": [
+    "Revolver",
+    "Crossbow",
+    "Wrench"
+  ],
+  "rooms": [
+    "Ballroom",
+    "Kitchen",
+    "Conservatory"
+  ],
+  "solution": {
+    "Colonel Mustard": {
+      "weapon": "Crossbow",
+      "room": "Kitchen"
+    },
+    "Reverend Gray": {
+      "weapon": "Wrench",
+      "room": "Ballroom"
+    },
+    "Mr. Green": {
+      "weapon": "Revolver",
+      "room": "Conservatory"
+    }
+  },
+  "murder_weapon": "Crossbow",
+  "culprit": "Colonel Mustard",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

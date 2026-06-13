@@ -1,0 +1,25 @@
+A murder has been committed at the manor. There are 4 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Miss Scarlet, Lady Lavender, Professor Plum, Mr. Green
+WEAPONS:  Poison, Crossbow, Dagger, Wrench
+ROOMS:    Study, Conservatory, Ballroom, Billiard Room
+
+The victim was killed with the POISON. The murderer is therefore the suspect who carried the poison.
+
+CLUES (all clues are factually true):
+  1. Professor Plum did not carry the wrench.
+  2. Professor Plum did not carry the dagger.
+  3. Mr. Green was not in the Billiard Room.
+  4. Miss Scarlet was not in the Study.
+  5. Whoever carried the crossbow did not go into the Billiard Room.
+  6. Professor Plum was not in the Ballroom.
+  7. Miss Scarlet was not in the Ballroom.
+  8. Miss Scarlet did not carry the dagger.
+  9. Mr. Green did not carry the poison.
+  10. Whoever carried the poison also was in the Ballroom.
+  11. Whoever carried the crossbow also was in the Conservatory.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Lady Lavender", "weapon": "Poison", "room": "Ballroom"}

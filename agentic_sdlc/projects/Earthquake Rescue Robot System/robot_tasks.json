@@ -1,0 +1,194 @@
+[
+    {
+        "id": "MOB-001",
+        "title": "Mobility and Mechanical Structure",
+        "description": "Design a compact, tracked chassis with high ground clearance for rubble navigation and dust ingress protection.",
+        "priority": "HIGH",
+        "assigned_to": "closed",
+        "comments": [
+            {
+                "author": "analyst",
+                "content": null,
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "code": "",
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            }
+        ]
+    },
+    {
+        "id": "SEN-001",
+        "title": "Sensors and Data Communication",
+        "description": "Integrate dust-proofed thermal and gas sensors with a low-power, robust local mesh communication module.",
+        "priority": "HIGH",
+        "assigned_to": "closed",
+        "comments": [
+            {
+                "author": "analyst",
+                "content": null,
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "code": "",
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer",
+                "gpu_report": {
+                    "target_gpu": "NVIDIA Jetson Orin Nano",
+                    "fps": 32.4,
+                    "latency_ms": 30.84,
+                    "vram_percent": 11.8,
+                    "power_draw_w": 14.0,
+                    "status": "PASS",
+                    "reasons": [],
+                    "legacy_gpu": "NVIDIA Jetson Nano",
+                    "legacy_fps": 40.4,
+                    "legacy_status": "PASS"
+                }
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer",
+                "gpu_report": {
+                    "target_gpu": "NVIDIA Jetson Orin Nano",
+                    "fps": 30.1,
+                    "latency_ms": 33.25,
+                    "vram_percent": 11.8,
+                    "power_draw_w": 10.2,
+                    "status": "PASS",
+                    "reasons": [],
+                    "legacy_gpu": "NVIDIA Jetson Nano",
+                    "legacy_fps": 42.1,
+                    "legacy_status": "PASS"
+                }
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer",
+                "gpu_report": {
+                    "target_gpu": "NVIDIA Jetson Orin Nano",
+                    "fps": 31.0,
+                    "latency_ms": 32.26,
+                    "vram_percent": 11.8,
+                    "power_draw_w": 12.0,
+                    "status": "PASS",
+                    "reasons": [],
+                    "legacy_gpu": "NVIDIA Jetson Nano",
+                    "legacy_fps": 28.3,
+                    "legacy_status": "PASS"
+                }
+            }
+        ],
+        "gpu_hardware_report": {
+            "target_gpu": "NVIDIA Jetson Orin Nano",
+            "fps": 31.0,
+            "latency_ms": 32.26,
+            "vram_percent": 11.8,
+            "power_draw_w": 12.0,
+            "status": "PASS",
+            "reasons": [],
+            "legacy_gpu": "NVIDIA Jetson Nano",
+            "legacy_fps": 28.3,
+            "legacy_status": "PASS"
+        }
+    },
+    {
+        "id": "POW-001",
+        "title": "Power Management and Battery System",
+        "description": "Develop a power management system and select a battery pack to ensure at least 4 hours of continuous operation.",
+        "priority": "HIGH",
+        "assigned_to": "closed",
+        "comments": [
+            {
+                "author": "analyst",
+                "content": null,
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "code": "",
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": null,
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": null,
+                "status": "FAIL",
+                "assigned_to": "engineer"
+            }
+        ]
+    }
+]

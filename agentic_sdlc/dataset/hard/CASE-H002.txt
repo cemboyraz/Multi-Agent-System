@@ -1,0 +1,31 @@
+A murder has been committed at the manor. There are 5 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Dr. Orchid, Miss Scarlet, Mr. Green, Reverend Gray, Lady Lavender
+WEAPONS:  Dagger, Lead Pipe, Wrench, Revolver, Poison
+ROOMS:    Cellar, Billiard Room, Ballroom, Conservatory, Kitchen
+
+The victim was killed with the WRENCH. The murderer is therefore the suspect who carried the wrench.
+
+CLUES (all clues are factually true):
+  1. Mr. Green was not in the Billiard Room.
+  2. Lady Lavender did not carry the wrench.
+  3. Lady Lavender was not in the Conservatory.
+  4. Mr. Green was not in the Kitchen.
+  5. Whoever carried the revolver did not go into the Conservatory.
+  6. Whoever carried the dagger also was in the Billiard Room.
+  7. Mr. Green did not carry the wrench.
+  8. Reverend Gray was not in the Conservatory.
+  9. Reverend Gray was not in the Ballroom.
+  10. Miss Scarlet was not in the Kitchen.
+  11. Whoever was in the Ballroom also carried the lead pipe.
+  12. Mr. Green was not in the Conservatory.
+  13. Lady Lavender did not carry the revolver.
+  14. Reverend Gray did not carry the dagger.
+  15. Whoever carried the poison also was in the Cellar.
+  16. Reverend Gray was not in the Kitchen.
+  17. Reverend Gray did not carry the wrench.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Miss Scarlet", "weapon": "Wrench", "room": "Conservatory"}

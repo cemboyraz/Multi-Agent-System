@@ -1,0 +1,144 @@
+{
+  "puzzle_id": "CASE-M004",
+  "n": 4,
+  "suspects": [
+    "Colonel Mustard",
+    "Miss Scarlet",
+    "Dr. Orchid",
+    "Mrs. Peacock"
+  ],
+  "weapons": [
+    "Candlestick",
+    "Dagger",
+    "Wrench",
+    "Rope"
+  ],
+  "rooms": [
+    "Cellar",
+    "Library",
+    "Conservatory",
+    "Ballroom"
+  ],
+  "solution": {
+    "Colonel Mustard": {
+      "weapon": "Dagger",
+      "room": "Ballroom"
+    },
+    "Miss Scarlet": {
+      "weapon": "Wrench",
+      "room": "Conservatory"
+    },
+    "Dr. Orchid": {
+      "weapon": "Rope",
+      "room": "Cellar"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Candlestick",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Wrench",
+  "culprit": "Miss Scarlet",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "weapon",
+      "b_val": "Candlestick",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "weapon",
+      "b_val": "Wrench",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": true
+    }
+  ],
+  "difficulty": "medium"
+}

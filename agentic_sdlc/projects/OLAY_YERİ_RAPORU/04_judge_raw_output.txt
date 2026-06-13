@@ -1,0 +1,40 @@
+=== JUDICIAL DECISION ===
+
+After careful review of the Detective's Conclusion and the Prosecutor's Reviews, this Court finds the evidence presented to be compelling and logically sound.
+
+The Detective's Conclusion has identified E1 as the primary suspect, supported by a robust set of evidence. The Prosecutor's Reviews, while attempting to identify weaknesses, ultimately reinforce the strength of the detective's findings.
+
+**Evaluation of Evidence Strength:**
+
+*   **Direct Forensic Evidence:** The presence of E1's fingerprint on the murder weapon (Delil 1), E1's DNA on the coffee cup (Delil 2), and E1's DNA under the victim's fingernails (Delil 6) are critical pieces of evidence directly linking E1 to the crime scene and the victim during the commission of the murder. These are not easily explained away.
+*   **Circumstantial Evidence:**
+    *   **Access and Opportunity:** E1's card access to the CEO's office (Delil 7) and the confirmed presence of E1 with the victim via elevator footage (Delil 3) and Selim's text message (Delil 8) establish E1's opportunity.
+    *   **Motive:** Selim's actions regarding the restricted financial file (Delil 5) and the audio recording ("Bunu saklayamayacaksın." - Delil 4) strongly suggest Selim discovered incriminating information that E1 wished to conceal. This provides a clear and credible motive.
+    *   **Timeline:** E1 entering the building with the victim at 21:40 and leaving alone at 22:03 places E1 squarely within the estimated time of death (21:50 – 22:10).
+
+**Addressing Prosecutor's Concerns:**
+
+The prosecutor's concerns, while noted, do not create reasonable doubt:
+
+*   **The "Second Exit" Ambiguity:** The prosecution's concern that only one person was recorded leaving at 22:03 is a misinterpretation. The evidence indicates only two people entered the office floor (Selim and E1). The fact that only one person *left the building* at 22:03, and no further exits were recorded, simply confirms that E1 was the last individual present and departed alone. It does not imply an unknown accomplice or an unrecorded exit. The detective's logic correctly interprets this as E1 being the sole perpetrator who left the scene.
+*   **Weapon Origin:** The origin of the knife is secondary to the fact that E1's fingerprint is on it and it was used to commit the murder. The crucial link is E1's handling of the weapon.
+*   **"Controlled Attack" vs. "Defense Scratches":** These are not contradictory. The "controlled attack" refers to the swift, precise nature of the fatal blow, while the "defense scratches" are the victim's natural reaction to such a sudden attack.
+
+The defense's arguments, as reviewed by the prosecutor, attempt to create doubt by focusing on minor points or misinterpreting the existing evidence. They fail to address the overwhelming confluence of forensic and circumstantial evidence pointing to E1.
+
+**Determination of Case Validity:**
+
+The case is valid and strong. The evidence is consistent, the logic is sound, and the motive and opportunity are clear. The forensic evidence directly implicates E1, and the circumstantial evidence corroborates this involvement.
+
+**Final Verdict:**
+
+The evidence presented overwhelmingly supports the conclusion that E1 committed the murder of Selim Karaca.
+
+=== FINAL VERDICT ===
+{
+  "verdict": "GUILTY",
+  "conviction_strength": 0.98,
+  "reasoning": "The evidence conclusively points to E1 as the perpetrator. E1 had authorized access to the victim's office, was present with the victim shortly before the estimated time of death, and had a clear motive to silence the victim regarding financial irregularities. Crucially, E1's fingerprint on the murder weapon, E1's DNA on the coffee cup, and E1's DNA under the victim's fingernails provide irrefutable forensic links to the crime. The timeline and security footage, when interpreted logically, confirm E1 as the sole individual present with the victim and the last person to leave the scene.",
+  "key_evidence": "E1's fingerprint on the murder weapon, E1's DNA under the victim's fingernails, and the confirmed presence of E1 with the victim during the time of death.",
+  "final_judgment": "Based on the totality of the evidence, E1 is found guilty of the murder of Selim Karaca."
+}

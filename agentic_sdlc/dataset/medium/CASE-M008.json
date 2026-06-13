@@ -1,0 +1,153 @@
+{
+  "puzzle_id": "CASE-M008",
+  "n": 4,
+  "suspects": [
+    "Reverend Gray",
+    "Colonel Mustard",
+    "Lady Lavender",
+    "Miss Scarlet"
+  ],
+  "weapons": [
+    "Candlestick",
+    "Rope",
+    "Revolver",
+    "Poison"
+  ],
+  "rooms": [
+    "Kitchen",
+    "Study",
+    "Ballroom",
+    "Cellar"
+  ],
+  "solution": {
+    "Reverend Gray": {
+      "weapon": "Poison",
+      "room": "Ballroom"
+    },
+    "Colonel Mustard": {
+      "weapon": "Revolver",
+      "room": "Kitchen"
+    },
+    "Lady Lavender": {
+      "weapon": "Rope",
+      "room": "Study"
+    },
+    "Miss Scarlet": {
+      "weapon": "Candlestick",
+      "room": "Cellar"
+    }
+  },
+  "murder_weapon": "Poison",
+  "culprit": "Reverend Gray",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

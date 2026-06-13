@@ -1,0 +1,74 @@
+{
+  "puzzle_id": "CASE-E006",
+  "n": 3,
+  "suspects": [
+    "Dr. Orchid",
+    "Colonel Mustard",
+    "Miss Scarlet"
+  ],
+  "weapons": [
+    "Crossbow",
+    "Candlestick",
+    "Dagger"
+  ],
+  "rooms": [
+    "Billiard Room",
+    "Greenhouse",
+    "Library"
+  ],
+  "solution": {
+    "Dr. Orchid": {
+      "weapon": "Dagger",
+      "room": "Greenhouse"
+    },
+    "Colonel Mustard": {
+      "weapon": "Candlestick",
+      "room": "Billiard Room"
+    },
+    "Miss Scarlet": {
+      "weapon": "Crossbow",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Dagger",
+  "culprit": "Dr. Orchid",
+  "clues": [
+    {
+      "kind": "pos",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "weapon",
+      "b_val": "Dagger",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

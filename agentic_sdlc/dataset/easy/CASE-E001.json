@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E001",
+  "n": 3,
+  "suspects": [
+    "Colonel Mustard",
+    "Reverend Gray",
+    "Miss Scarlet"
+  ],
+  "weapons": [
+    "Dagger",
+    "Poison",
+    "Rope"
+  ],
+  "rooms": [
+    "Ballroom",
+    "Study",
+    "Billiard Room"
+  ],
+  "solution": {
+    "Colonel Mustard": {
+      "weapon": "Dagger",
+      "room": "Study"
+    },
+    "Reverend Gray": {
+      "weapon": "Rope",
+      "room": "Ballroom"
+    },
+    "Miss Scarlet": {
+      "weapon": "Poison",
+      "room": "Billiard Room"
+    }
+  },
+  "murder_weapon": "Rope",
+  "culprit": "Reverend Gray",
+  "clues": [
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

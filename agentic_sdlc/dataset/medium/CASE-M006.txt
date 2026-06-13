@@ -1,0 +1,26 @@
+A murder has been committed at the manor. There are 4 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Mr. Green, Professor Plum, Dr. Orchid, Colonel Mustard
+WEAPONS:  Rope, Dagger, Lead Pipe, Poison
+ROOMS:    Kitchen, Ballroom, Study, Greenhouse
+
+The victim was killed with the POISON. The murderer is therefore the suspect who carried the poison.
+
+CLUES (all clues are factually true):
+  1. Professor Plum was not in the Ballroom.
+  2. Dr. Orchid was not in the Ballroom.
+  3. Mr. Green was not in the Study.
+  4. Dr. Orchid did not carry the poison.
+  5. Whoever carried the rope also was in the Ballroom.
+  6. Professor Plum was not in the Greenhouse.
+  7. Colonel Mustard was not in the Kitchen.
+  8. Colonel Mustard did not carry the poison.
+  9. Colonel Mustard was not in the Greenhouse.
+  10. Colonel Mustard did not carry the dagger.
+  11. Whoever carried the lead pipe did not go into the Greenhouse.
+  12. Colonel Mustard did not carry the rope.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Professor Plum", "weapon": "Poison", "room": "Kitchen"}

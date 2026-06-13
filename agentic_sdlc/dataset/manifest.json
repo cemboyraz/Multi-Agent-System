@@ -1,0 +1,370 @@
+{
+  "cases": [
+    {
+      "puzzle_id": "CASE-E000",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E000.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Revolver",
+        "room": "Greenhouse"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E001",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E001.json",
+      "answer": {
+        "culprit": "Reverend Gray",
+        "weapon": "Rope",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E002",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E002.json",
+      "answer": {
+        "culprit": "Lady Lavender",
+        "weapon": "Rope",
+        "room": "Conservatory"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E003",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E003.json",
+      "answer": {
+        "culprit": "Mr. Green",
+        "weapon": "Rope",
+        "room": "Conservatory"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E004",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E004.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Rope",
+        "room": "Greenhouse"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E005",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E005.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Wrench",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E006",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 4,
+      "json": "easy/CASE-E006.json",
+      "answer": {
+        "culprit": "Dr. Orchid",
+        "weapon": "Dagger",
+        "room": "Greenhouse"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E007",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E007.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Crossbow",
+        "room": "Kitchen"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E008",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E008.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Wrench",
+        "room": "Billiard Room"
+      }
+    },
+    {
+      "puzzle_id": "CASE-E009",
+      "difficulty": "easy",
+      "n": 3,
+      "num_clues": 5,
+      "json": "easy/CASE-E009.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Dagger",
+        "room": "Cellar"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M000",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 11,
+      "json": "medium/CASE-M000.json",
+      "answer": {
+        "culprit": "Colonel Mustard",
+        "weapon": "Revolver",
+        "room": "Cellar"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M001",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M001.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Revolver",
+        "room": "Kitchen"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M002",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M002.json",
+      "answer": {
+        "culprit": "Professor Plum",
+        "weapon": "Poison",
+        "room": "Cellar"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M003",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M003.json",
+      "answer": {
+        "culprit": "Miss Scarlet",
+        "weapon": "Crossbow",
+        "room": "Library"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M004",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 11,
+      "json": "medium/CASE-M004.json",
+      "answer": {
+        "culprit": "Miss Scarlet",
+        "weapon": "Wrench",
+        "room": "Conservatory"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M005",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 11,
+      "json": "medium/CASE-M005.json",
+      "answer": {
+        "culprit": "Lady Lavender",
+        "weapon": "Crossbow",
+        "room": "Cellar"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M006",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M006.json",
+      "answer": {
+        "culprit": "Professor Plum",
+        "weapon": "Poison",
+        "room": "Kitchen"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M007",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M007.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Dagger",
+        "room": "Cellar"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M008",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 12,
+      "json": "medium/CASE-M008.json",
+      "answer": {
+        "culprit": "Reverend Gray",
+        "weapon": "Poison",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-M009",
+      "difficulty": "medium",
+      "n": 4,
+      "num_clues": 11,
+      "json": "medium/CASE-M009.json",
+      "answer": {
+        "culprit": "Lady Lavender",
+        "weapon": "Poison",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H000",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H000.json",
+      "answer": {
+        "culprit": "Mr. Green",
+        "weapon": "Rope",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H001",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H001.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Dagger",
+        "room": "Library"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H002",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H002.json",
+      "answer": {
+        "culprit": "Miss Scarlet",
+        "weapon": "Wrench",
+        "room": "Conservatory"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H003",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H003.json",
+      "answer": {
+        "culprit": "Professor Plum",
+        "weapon": "Wrench",
+        "room": "Conservatory"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H004",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H004.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Candlestick",
+        "room": "Ballroom"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H005",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 21,
+      "json": "hard/CASE-H005.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Poison",
+        "room": "Kitchen"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H006",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 18,
+      "json": "hard/CASE-H006.json",
+      "answer": {
+        "culprit": "Miss Scarlet",
+        "weapon": "Crossbow",
+        "room": "Study"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H007",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 18,
+      "json": "hard/CASE-H007.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Crossbow",
+        "room": "Billiard Room"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H008",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H008.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Lead Pipe",
+        "room": "Greenhouse"
+      }
+    },
+    {
+      "puzzle_id": "CASE-H009",
+      "difficulty": "hard",
+      "n": 5,
+      "num_clues": 17,
+      "json": "hard/CASE-H009.json",
+      "answer": {
+        "culprit": "Mrs. Peacock",
+        "weapon": "Rope",
+        "room": "Billiard Room"
+      }
+    }
+  ],
+  "spec": {
+    "easy": 10,
+    "medium": 10,
+    "hard": 10
+  },
+  "base_seed": 1000
+}

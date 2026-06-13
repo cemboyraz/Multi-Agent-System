@@ -1,0 +1,32 @@
+A murder has been committed at the manor. There are 5 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Dr. Orchid, Mrs. Peacock, Mr. Green, Miss Scarlet, Professor Plum
+WEAPONS:  Poison, Wrench, Lead Pipe, Dagger, Crossbow
+ROOMS:    Greenhouse, Kitchen, Study, Billiard Room, Cellar
+
+The victim was killed with the CROSSBOW. The murderer is therefore the suspect who carried the crossbow.
+
+CLUES (all clues are factually true):
+  1. Whoever was in the Cellar also carried the wrench.
+  2. Whoever carried the dagger did not go into the Study.
+  3. Dr. Orchid did not carry the dagger.
+  4. Mrs. Peacock was not in the Greenhouse.
+  5. Whoever carried the lead pipe did not go into the Study.
+  6. Professor Plum did not carry the crossbow.
+  7. Whoever carried the poison did not go into the Billiard Room.
+  8. Professor Plum was not in the Kitchen.
+  9. Professor Plum was not in the Study.
+  10. Mrs. Peacock was not in the Kitchen.
+  11. Mrs. Peacock did not carry the poison.
+  12. Professor Plum was not in the Greenhouse.
+  13. Dr. Orchid did not carry the poison.
+  14. Miss Scarlet did not carry the wrench.
+  15. Miss Scarlet was not in the Study.
+  16. Dr. Orchid did not carry the crossbow.
+  17. Dr. Orchid was not in the Kitchen.
+  18. Whoever was in the Billiard Room also carried the crossbow.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Mrs. Peacock", "weapon": "Crossbow", "room": "Billiard Room"}

@@ -1,0 +1,19 @@
+A murder has been committed at the manor. There are 3 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Lady Lavender, Reverend Gray, Mrs. Peacock
+WEAPONS:  Lead Pipe, Poison, Wrench
+ROOMS:    Conservatory, Ballroom, Greenhouse
+
+The victim was killed with the WRENCH. The murderer is therefore the suspect who carried the wrench.
+
+CLUES (all clues are factually true):
+  1. Whoever carried the lead pipe also was in the Conservatory.
+  2. Reverend Gray was not in the Greenhouse.
+  3. Mrs. Peacock did not carry the poison.
+  4. Reverend Gray did not carry the wrench.
+  5. Whoever carried the wrench did not go into the Greenhouse.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Mrs. Peacock", "weapon": "Wrench", "room": "Ballroom"}

@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E003",
+  "n": 3,
+  "suspects": [
+    "Lady Lavender",
+    "Mr. Green",
+    "Professor Plum"
+  ],
+  "weapons": [
+    "Rope",
+    "Wrench",
+    "Crossbow"
+  ],
+  "rooms": [
+    "Greenhouse",
+    "Conservatory",
+    "Study"
+  ],
+  "solution": {
+    "Lady Lavender": {
+      "weapon": "Crossbow",
+      "room": "Greenhouse"
+    },
+    "Mr. Green": {
+      "weapon": "Rope",
+      "room": "Conservatory"
+    },
+    "Professor Plum": {
+      "weapon": "Wrench",
+      "room": "Study"
+    }
+  },
+  "murder_weapon": "Rope",
+  "culprit": "Mr. Green",
+  "clues": [
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "weapon",
+      "b_val": "Rope",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

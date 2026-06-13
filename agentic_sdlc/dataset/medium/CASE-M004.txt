@@ -1,0 +1,25 @@
+A murder has been committed at the manor. There are 4 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Colonel Mustard, Miss Scarlet, Dr. Orchid, Mrs. Peacock
+WEAPONS:  Candlestick, Dagger, Wrench, Rope
+ROOMS:    Cellar, Library, Conservatory, Ballroom
+
+The victim was killed with the WRENCH. The murderer is therefore the suspect who carried the wrench.
+
+CLUES (all clues are factually true):
+  1. Colonel Mustard did not carry the rope.
+  2. Miss Scarlet did not carry the rope.
+  3. Colonel Mustard was not in the Library.
+  4. Dr. Orchid was not in the Ballroom.
+  5. Mrs. Peacock did not carry the rope.
+  6. Colonel Mustard was not in the Conservatory.
+  7. Whoever was in the Library also carried the candlestick.
+  8. Whoever carried the rope did not go into the Ballroom.
+  9. Mrs. Peacock was not in the Conservatory.
+  10. Whoever was in the Conservatory also carried the wrench.
+  11. Dr. Orchid was not in the Library.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Miss Scarlet", "weapon": "Wrench", "room": "Conservatory"}

@@ -1,0 +1,18 @@
+=== PROSECUTION REVIEW ===
+{
+  "case_status": "WEAK",
+  "clue_match": "60%",
+  "weaknesses": [
+    "Motive: Ayşe'nin cinayet için belirgin bir motivine dair somut delil sunulmamıştır. 'Aile içi anlaşmazlıklar veya kişisel nedenler' varsayımı, tek başına yeterli değildir.",
+    "Misina Parçası: Misina parçasının tam olarak nasıl bir düzenek kurduğu ve kapıyı nasıl dışarıdan kilitlediği net olarak açıklanmamıştır. Bu, bir varsayım olarak kalmaktadır.",
+    "Kemal'in Elenmesi: Kemal'in, Ayşe'ye kıyasla 'daha az hesaplı ve kişisel bir süslemeyi yapma ihtimalinin daha düşük olması' gerekçesiyle elenmesi zayıf bir argümandır. Bu, tamamen spekülasyona dayalıdır ve Kemal'in olaydaki potansiyel rolünü tamamen göz ardı etmektedir.",
+    "Anahtarın Konumu: Odanın içeriden kilitli olması ve anahtarın masanın üzerinde bulunması, dedektifin 'intihar süsü verme' senaryosunu desteklemekle birlikte, bu senaryonun kusursuzluğunu tam olarak kanıtlamamaktadır. Misina parçasının varlığı, bu senaryoyu desteklese de, anahtarın masada olması başlı başına bir çelişki yaratmaktadır (eğer kapı dışarıdan kilitlendiyse neden anahtar içeride?)."
+  ],
+  "contradictions": [
+    "Eğer kapı misina ile dışarıdan kilitlendiyse ve ardından içeriden kilitli süsü verildiği iddia ediliyorsa, anahtarın neden hala masanın üzerinde olduğu tam olarak açıklanamamaktadır. Bu durum, kapının gerçekten içeriden mi kilitlendiği sorusunu akla getirmektedir.",
+    "Dedektif, olayın intihar süsü verilmiş bir cinayet olduğunu savunurken, bu süslemenin ne kadar başarılı olduğu konusunda çelişki bulunmaktadır. Silahın konumu ve kurşun giriş yeri intihar olmadığını gösterirken, misina parçası gibi ipuçları da bir gizleme çabasını işaret etmektedir. Ancak, bu gizleme çabasının ne kadar etkili veya kusursuz olduğu belirsizdir."
+  ],
+  "recommendation": "Daha fazla araştırma yapılması gerekmektedir. Özellikle Ayşe'nin motivini güçlendirecek delillerin aranması, misina parçasının kullanımına dair daha somut kanıtlar elde edilmesi ve Kemal'in olaydaki potansiyel rolünün daha detaylı incelenmesi gerekmektedir.",
+  "verdict_confidence": 0.65
+}
+=== PROSECUTION VERDICT ===

@@ -1,0 +1,20 @@
+=== PROSECUTION REVIEW ===
+```json
+{
+  "case_status": "WEAK",
+  "clue_match": "60%",
+  "weaknesses": [
+    "Motive: Dedektif, Ayşe'nin 'henüz belirlenmemiş olsa da, eş cinayetlerinde yaygın olan aile içi anlaşmazlıklar veya kişisel nedenler olabileceği' varsayımına dayanıyor. Bu, spekülatif bir motivdir ve somut bir delil ile desteklenmemektedir.",
+    "Misina Parçası: Misina parçasının pencere pervazında bulunması, katilin odayı dışarıdan kilitlemek için bir yöntem kullandığını düşündürmesi mantıklı olsa da, bu yöntemin tam olarak nasıl çalıştığına dair bir açıklama yoktur. Misinanın kapıyı nasıl kilitlediği veya pencere ile nasıl bir ilişkisi olduğu belirsizdir. Bu, intihar süsü vermek için kullanılan bir yöntem olarak sunuluyor ancak mekanizması açıklanmamış.",
+    "Kemal'in Elenmesi: Kemal'in, Ayşe'ye kıyasla daha az hesaplı ve kişisel bir süslemeyi yapma ihtimalinin daha düşük olması nedeniyle elenmesi, zayıf bir gerekçelendirmedir. Kemal'in de benzer bir düzenek kurma kapasitesi veya motivasyonu olabileceği göz ardı edilmiştir. Sadece 'kişisel ilişki' üzerinden bir eleme yapılmıştır.",
+    "Silahın Yerleştirilmesi: Kurşun giriş yeri ile silahın konumu arasındaki çelişkinin 'intihar görüntüsü vermek için silahın yerleştirildiğini' göstermesi mantıklı olsa da, Ayşe'nin silahı nasıl ve ne zaman yerleştirdiğine dair somut bir kanıt sunulmamıştır.",
+    "Anahtarın Durumu: Odanın anahtarının içeride masanın üzerinde bulunması, kapının içeriden kilitli olduğunu destekler. Ancak misina ile dışarıdan kilitleme teorisi ile bu durumun nasıl bağdaştığı tam olarak açıklanmamıştır. Eğer dışarıdan kilitlendiyse, içerideki anahtarın varlığı bir çelişki yaratmasa da, dışarıdan kilitleme yönteminin gerekliliğini sorgulatır."
+  ],
+  "contradictions": [
+    "Oda içeriden kilitli ve anahtar masada bulunuyor. Bu durum, kapının içeriden kilitlendiğini gösteriyor. Ancak dedektif, misina parçası ile katilin odayı dışarıdan kilitlediği sonucuna varıyor. Bu iki durum birbiriyle tam olarak örtüşmüyor. Eğer dışarıdan kilitlenebiliyorsa, neden içeriden de kilitlenmiş ve anahtar içeride bırakılmış? Bu, intihar süsü verme çabasının bir parçası olarak kabul edilse de, mekanizma net değil."
+  ],
+  "recommendation": "Daha fazla araştırma yapılması gerekmektedir. Mevcut delillerle Ayşe'nin suçlu olduğuna dair kesin bir karar vermek için yeterli kanıt bulunmamaktadır. Özellikle motiv ve misina parçası ile kapının dışarıdan nasıl kilitlendiğine dair somut kanıtlar gereklidir.",
+  "verdict_confidence": 0.70
+}
+```
+=== PROSECUTION VERDICT ===

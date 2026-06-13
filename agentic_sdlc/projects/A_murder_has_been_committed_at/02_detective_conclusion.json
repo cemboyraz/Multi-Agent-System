@@ -1,0 +1,15 @@
+{
+  "suspect": "Reverend Gray",
+  "weapon": "Rope",
+  "location": "Ballroom",
+  "motive": "The motive is not explicitly stated in the clues, but the deduction leads to Reverend Gray as the perpetrator based on the distribution of weapons and rooms.",
+  "evidence": [
+    "The victim was killed with the ROPE.",
+    "Clue 1: Whoever carried the rope also was in the Ballroom.",
+    "Clue 3: Miss Scarlet did not carry the dagger.",
+    "Clue 4: Reverend Gray did not carry the dagger.",
+    "Clue 5: Miss Scarlet did not carry the rope."
+  ],
+  "logic": "1. The murder weapon was the Rope, so the murderer is the person who carried the Rope.\n2. Clue 1 states that the person with the Rope was in the Ballroom. Thus, Rope = Ballroom.\n3. Clue 5 states Miss Scarlet did not carry the Rope. Clue 3 states Miss Scarlet did not carry the Dagger. Since there are only three weapons (Dagger, Poison, Rope), Miss Scarlet must have carried the Poison. This eliminates Miss Scarlet as the murderer.\n4. Clue 4 states Reverend Gray did not carry the Dagger. Since Miss Scarlet has the Poison, Reverend Gray cannot have the Poison either. Therefore, Reverend Gray must have carried the Rope.\n5. Since Reverend Gray carried the Rope, and the Rope was in the Ballroom (Clue 1), Reverend Gray was in the Ballroom. This confirms Reverend Gray as the murderer.\n6. For completeness, Colonel Mustard was not in the Billiard Room (Clue 2). He cannot be in the Ballroom (Reverend Gray is there), so he must be in the Study. The remaining weapon is the Dagger, so Colonel Mustard carried the Dagger.\n7. The final arrangement is: Reverend Gray (Rope, Ballroom), Miss Scarlet (Poison, Billiard Room - the only remaining room), and Colonel Mustard (Dagger, Study).",
+  "confidence": 0.95
+}

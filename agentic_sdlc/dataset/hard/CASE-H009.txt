@@ -1,0 +1,31 @@
+A murder has been committed at the manor. There are 5 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Dr. Orchid, Reverend Gray, Lady Lavender, Colonel Mustard, Mrs. Peacock
+WEAPONS:  Rope, Candlestick, Poison, Dagger, Crossbow
+ROOMS:    Ballroom, Billiard Room, Library, Conservatory, Greenhouse
+
+The victim was killed with the ROPE. The murderer is therefore the suspect who carried the rope.
+
+CLUES (all clues are factually true):
+  1. Dr. Orchid was not in the Billiard Room.
+  2. Whoever carried the candlestick did not go into the Ballroom.
+  3. Colonel Mustard did not carry the crossbow.
+  4. Whoever carried the poison did not go into the Greenhouse.
+  5. Mrs. Peacock did not carry the dagger.
+  6. Mrs. Peacock did not carry the poison.
+  7. Colonel Mustard was not in the Billiard Room.
+  8. Whoever carried the candlestick also was in the Greenhouse.
+  9. Dr. Orchid did not carry the candlestick.
+  10. Colonel Mustard was not in the Greenhouse.
+  11. Reverend Gray did not carry the dagger.
+  12. Colonel Mustard was not in the Ballroom.
+  13. Dr. Orchid was not in the Ballroom.
+  14. Whoever was in the Library also carried the crossbow.
+  15. Whoever carried the dagger also was in the Ballroom.
+  16. Reverend Gray was not in the Billiard Room.
+  17. Mrs. Peacock did not carry the crossbow.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Mrs. Peacock", "weapon": "Rope", "room": "Billiard Room"}

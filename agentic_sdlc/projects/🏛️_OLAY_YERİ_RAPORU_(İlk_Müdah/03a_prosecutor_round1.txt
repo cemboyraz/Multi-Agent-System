@@ -1,0 +1,23 @@
+=== PROSECUTION REVIEW ===
+{
+  "case_status": "WEAK",
+  "clue_match": "60%",
+  "weaknesses": [
+    "The detective identifies the CFO as the prime suspect based on the nature of the financial irregularities, but there is no direct evidence placing the CFO at the scene or linking them to the murder weapon or the DNA/skin fragments.",
+    "The DNA on the coffee cup is stated as 'unknown person's DNA', not specifically the CFO's. This is a critical piece of evidence that is not explicitly linked to the suspect.",
+    "The skin fragments under the victim's fingernails are also from an 'unknown person', not specifically the CFO.",
+    "The security footage shows 'one person' descending rapidly at 22:11, but the face is not clear, and it's not explicitly identified as the CFO.",
+    "The detective states the incriminating file was accessible only to 3 senior executives, but doesn't name these executives. While the CFO is *a* senior executive, it's not proven they were one of the *three* with access, nor that the other two weren't involved or more directly implicated.",
+    "The motive is strong for *someone* to hide financial misconduct, but the direct link to the CFO is inferred rather than proven.",
+    "The detective doesn't address the presence of two individuals seen going up at 21:38, nor the debate heard by a witness. The conclusion focuses on a single fleeing individual.",
+    "The partial fingerprint on the door is not linked to the CFO."
+  ],
+  "contradictions": [
+    "The detective states 'DNA from an unknown person' was found, but then implies this unknown person is the suspect (CFO) without further substantiation.",
+    "The detective states 'skin fragments found under the victim's fingernails, indicating a struggle,' but doesn't connect these fragments to the CFO.",
+    "The detective mentions the victim's phone was in hand and the coffee cup was not cold, suggesting a recent event, which aligns with the time of death. However, this doesn't specifically point to the CFO."
+  ],
+  "recommendation": "The detective's conclusion is speculative. While the motive is clear and the victim's actions leading up to the murder are well-established, the evidence does not directly and conclusively point to the CFO as the perpetrator. The crucial DNA and skin fragment evidence are attributed to an 'unknown person.' Further investigation is required to identify the individuals whose DNA and skin were found, and to establish a direct link between the CFO and the murder. The case is currently weak.",
+  "verdict_confidence": 0.85
+}
+=== PROSECUTION VERDICT ===

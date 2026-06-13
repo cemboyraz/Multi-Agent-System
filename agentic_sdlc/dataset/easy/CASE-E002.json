@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E002",
+  "n": 3,
+  "suspects": [
+    "Reverend Gray",
+    "Miss Scarlet",
+    "Lady Lavender"
+  ],
+  "weapons": [
+    "Revolver",
+    "Crossbow",
+    "Rope"
+  ],
+  "rooms": [
+    "Ballroom",
+    "Billiard Room",
+    "Conservatory"
+  ],
+  "solution": {
+    "Reverend Gray": {
+      "weapon": "Crossbow",
+      "room": "Ballroom"
+    },
+    "Miss Scarlet": {
+      "weapon": "Revolver",
+      "room": "Billiard Room"
+    },
+    "Lady Lavender": {
+      "weapon": "Rope",
+      "room": "Conservatory"
+    }
+  },
+  "murder_weapon": "Rope",
+  "culprit": "Lady Lavender",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

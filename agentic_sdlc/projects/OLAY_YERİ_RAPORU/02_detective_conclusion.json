@@ -1,0 +1,19 @@
+{
+  "suspect": "E1",
+  "weapon": "Mutfak tipi bıçak",
+  "location": "Apex Finans Şirketi – 12. Kat CEO Ofisi",
+  "motive": "Selim Karaca'nın, E1'in karıştığı veya gizlemeye çalıştığı finansal usulsüzlükleri veya hassas bilgileri ortaya çıkarmasını engellemek.",
+  "evidence": [
+    "Bıçak üzerindeki bilinmeyen kişi (E1) parmak izi (Delil 1)",
+    "Diğer kahve bardağındaki E1 DNA'sı (Delil 2)",
+    "Kurbanın sol el tırnaklarında E1 DNA'sı (Delil 6)",
+    "Ofise kartlı geçiş yetkisi (Delil 7)",
+    "Selim'in E1'e özel görüşme talebi mesajı (Delil 8)",
+    "21:40'ta asansöre birlikte binen iki kişiden biri (Delil 3)",
+    "22:03'te binadan hızlıca çıkan tek kişi (Delil 3)",
+    "21:47'deki ses kaydında geçen 'Bunu saklayamayacaksın' ifadesi ve konuşma isteği (Delil 4)",
+    "Selim'in 21:35'te kısıtlı finansal dosyayı açması ve 21:38'de kopyalamaya çalışması (Delil 5)"
+  ],
+  "logic": "E1, CEO ofisinin kapısına kartlı erişimi olan iki kişiden biridir. 21:40'ta Selim ile birlikte asansöre binmesi, Selim'in 21:39'daki mesajı ve masadaki iki kahve bardağı (biri E1'in DNA'sını taşıyor) bir görüşme yapıldığını doğrulamaktadır. 21:47'deki ses kaydı, Selim'in E1'in gizlemeye çalıştığı bir şeyi keşfettiğini ve E1'in bunu engellemek istediğini göstermektedir. Bilgisayar kayıtları Selim'in hassas bir finansal dosyayı incelediğini desteklemektedir. E1'in parmak izinin bıçakta, DNA'sının kahve bardağında ve kurbanın tırnaklarında bulunması, E1'in olay yerinde bulunduğunu ve saldırıya karıştığını kanıtlamaktadır. 22:03'te binadan tek başına çıkan kişi E1'dir. E2 ve E3'ün ofise erişimi olmadığı için olayla ilgileri yoktur.",
+  "confidence": 0.98
+}

@@ -1,0 +1,19 @@
+A murder has been committed at the manor. There are 3 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Reverend Gray, Dr. Orchid, Colonel Mustard
+WEAPONS:  Lead Pipe, Revolver, Candlestick
+ROOMS:    Greenhouse, Kitchen, Conservatory
+
+The victim was killed with the REVOLVER. The murderer is therefore the suspect who carried the revolver.
+
+CLUES (all clues are factually true):
+  1. Whoever carried the revolver also was in the Greenhouse.
+  2. Dr. Orchid was not in the Greenhouse.
+  3. Reverend Gray was not in the Greenhouse.
+  4. Whoever carried the lead pipe did not go into the Kitchen.
+  5. Dr. Orchid did not carry the candlestick.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Colonel Mustard", "weapon": "Revolver", "room": "Greenhouse"}

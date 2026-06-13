@@ -1,0 +1,205 @@
+{
+  "puzzle_id": "CASE-H003",
+  "n": 5,
+  "suspects": [
+    "Professor Plum",
+    "Dr. Orchid",
+    "Miss Scarlet",
+    "Reverend Gray",
+    "Mrs. Peacock"
+  ],
+  "weapons": [
+    "Rope",
+    "Wrench",
+    "Dagger",
+    "Poison",
+    "Crossbow"
+  ],
+  "rooms": [
+    "Greenhouse",
+    "Conservatory",
+    "Study",
+    "Cellar",
+    "Library"
+  ],
+  "solution": {
+    "Professor Plum": {
+      "weapon": "Wrench",
+      "room": "Conservatory"
+    },
+    "Dr. Orchid": {
+      "weapon": "Rope",
+      "room": "Library"
+    },
+    "Miss Scarlet": {
+      "weapon": "Crossbow",
+      "room": "Cellar"
+    },
+    "Reverend Gray": {
+      "weapon": "Poison",
+      "room": "Study"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Dagger",
+      "room": "Greenhouse"
+    }
+  },
+  "murder_weapon": "Wrench",
+  "culprit": "Professor Plum",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "weapon",
+      "b_val": "Crossbow",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Conservatory",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "weapon",
+      "b_val": "Rope",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Study",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "room",
+      "b_val": "Library",
+      "suspect": "",
+      "is_red_herring": true
+    }
+  ],
+  "difficulty": "hard"
+}

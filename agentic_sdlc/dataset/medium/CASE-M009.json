@@ -1,0 +1,144 @@
+{
+  "puzzle_id": "CASE-M009",
+  "n": 4,
+  "suspects": [
+    "Miss Scarlet",
+    "Lady Lavender",
+    "Professor Plum",
+    "Mr. Green"
+  ],
+  "weapons": [
+    "Poison",
+    "Crossbow",
+    "Dagger",
+    "Wrench"
+  ],
+  "rooms": [
+    "Study",
+    "Conservatory",
+    "Ballroom",
+    "Billiard Room"
+  ],
+  "solution": {
+    "Miss Scarlet": {
+      "weapon": "Wrench",
+      "room": "Billiard Room"
+    },
+    "Lady Lavender": {
+      "weapon": "Poison",
+      "room": "Ballroom"
+    },
+    "Professor Plum": {
+      "weapon": "Crossbow",
+      "room": "Conservatory"
+    },
+    "Mr. Green": {
+      "weapon": "Dagger",
+      "room": "Study"
+    }
+  },
+  "murder_weapon": "Poison",
+  "culprit": "Lady Lavender",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "room",
+      "b_val": "Billiard Room",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

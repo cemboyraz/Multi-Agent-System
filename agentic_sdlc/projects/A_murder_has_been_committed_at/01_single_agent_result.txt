@@ -1,0 +1,7 @@
+```json
+{
+  "culprit": "Reverend Gray",
+  "weapon": "Rope",
+  "room": "Ballroom"
+}
+```

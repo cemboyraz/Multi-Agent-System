@@ -1,0 +1,7 @@
+{
+  "verdict": "GUILTY",
+  "conviction_strength": 0.98,
+  "reasoning": "The evidence conclusively points to E1 as the perpetrator. E1 had authorized access to the victim's office, was present with the victim shortly before the estimated time of death, and had a clear motive to silence the victim regarding financial irregularities. Crucially, E1's fingerprint on the murder weapon, E1's DNA on the coffee cup, and E1's DNA under the victim's fingernails provide irrefutable forensic links to the crime. The timeline and security footage, when interpreted logically, confirm E1 as the sole individual present with the victim and the last person to leave the scene.",
+  "key_evidence": "E1's fingerprint on the murder weapon, E1's DNA under the victim's fingernails, and the confirmed presence of E1 with the victim during the time of death.",
+  "final_judgment": "Based on the totality of the evidence, E1 is found guilty of the murder of Selim Karaca."
+}

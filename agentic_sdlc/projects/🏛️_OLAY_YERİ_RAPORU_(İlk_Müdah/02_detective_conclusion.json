@@ -1,0 +1,18 @@
+{
+  "suspect": "CFO (Chief Financial Officer)",
+  "weapon": "Knife",
+  "location": "NovaTech Plaza – 6. Kat Toplantı Odası",
+  "motive": "To cover up financial misconduct and prevent the discovery of company irregularities.",
+  "evidence": [
+    "Victim discovered and attempted to delete a confidential internal audit file related to irregularities.",
+    "Destroyed USB found with financial transfer records.",
+    "Incriminating file was accessible only to 3 senior executives.",
+    "DNA from an unknown person found on a second coffee cup in the room.",
+    "Skin fragments found under the victim's fingernails, indicating a struggle.",
+    "Security camera footage shows one person rapidly descending from the 6th floor at 22:11.",
+    "Victim's final text message at 21:41: 'You won't be able to hide this. I'm coming to the meeting.'",
+    "The nature of the discovered irregularity (financial transfers) directly implicates the CFO."
+  ],
+  "logic": "The victim uncovered critical financial irregularities, confirmed by the 'Internal Audit - Confidential' file opened at 21:30 and the destroyed USB containing financial transfer records. This file was accessible only to three senior executives. The victim's last message at 21:41 indicated he was going to confront the perpetrators in a meeting. The time of death (21:55-22:20) aligns with this confrontation and subsequent murder. The presence of another person's DNA on a coffee cup and skin fragments under the victim's fingernails indicates the killer was in the room and fought with the victim. The rapid exit captured on security footage at 22:11 confirms the perpetrator fled. The motive is clearly to hide financial misconduct. Among the three executives with access to the file, the CFO is the most directly implicated by the 'financial transfer records,' making them the prime suspect.",
+  "confidence": 0.95
+}

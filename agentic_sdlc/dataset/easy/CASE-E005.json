@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E005",
+  "n": 3,
+  "suspects": [
+    "Lady Lavender",
+    "Reverend Gray",
+    "Mrs. Peacock"
+  ],
+  "weapons": [
+    "Lead Pipe",
+    "Poison",
+    "Wrench"
+  ],
+  "rooms": [
+    "Conservatory",
+    "Ballroom",
+    "Greenhouse"
+  ],
+  "solution": {
+    "Lady Lavender": {
+      "weapon": "Poison",
+      "room": "Greenhouse"
+    },
+    "Reverend Gray": {
+      "weapon": "Lead Pipe",
+      "room": "Conservatory"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Wrench",
+      "room": "Ballroom"
+    }
+  },
+  "murder_weapon": "Wrench",
+  "culprit": "Mrs. Peacock",
+  "clues": [
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Conservatory",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

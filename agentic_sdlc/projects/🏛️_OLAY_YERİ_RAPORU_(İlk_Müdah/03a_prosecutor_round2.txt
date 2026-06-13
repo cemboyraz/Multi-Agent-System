@@ -1,0 +1,22 @@
+=== PROSECUTION REVIEW ===
+{
+  "case_status": "WEAK",
+  "clue_match": "60%",
+  "weaknesses": [
+    "No direct forensic evidence (DNA, fingerprints) linking the CFO to the crime scene.",
+    "The 'unknown person' DNA on the coffee cup and skin fragments under the victim's nails are not definitively identified as belonging to the CFO. This is a significant gap.",
+    "Security camera footage shows one person descending, but their identity is not clear, and it doesn't definitively place the CFO at the scene during the murder.",
+    "The 'two individuals' seen going up at 21:38 are not identified, so it's speculative to assume the CFO was one of them.",
+    "The partial fingerprint on the door is not linked to the CFO.",
+    "While the motive is strong for *someone* with access to the file, it's not exclusive to the CFO among the three senior executives.",
+    "The destroyed USB and file deletion attempts indicate a cover-up, but not necessarily by the CFO specifically."
+  ],
+  "contradictions": [
+    "The detective's conclusion states 'The nature of the discovered irregularity (financial transfers) directly implicates the CFO.' While the USB contained financial transfer records, the report does not explicitly state that these records *only* implicate the CFO, or that the CFO was the *only* one who would be implicated by them. This is an assumption.",
+    "The detective states 'skin fragments found under the victim's fingernails, indicating a struggle.' The initial crime scene report states 'Mücadele izi hafif' (slight struggle marks). This is a minor contradiction in the severity of the struggle.",
+    "The detective assumes the 'two people' seen on camera at 21:38 were involved in the misconduct and that the CFO was one of them. This is not explicitly stated in any report."
+  ],
+  "recommendation": "The case against the CFO is circumstantial and lacks direct forensic evidence. While the motive is strong and the timeline is suggestive, the leaps in logic, particularly regarding the identity of the perpetrator based on 'unknown' DNA and the assumption of the CFO's presence, make the case weak. Further investigation is required to obtain direct evidence linking the CFO to the crime scene or the murder weapon. The current evidence is insufficient for a conviction.",
+  "verdict_confidence": 0.80
+}
+=== PROSECUTION VERDICT ===

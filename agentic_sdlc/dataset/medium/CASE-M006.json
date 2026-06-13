@@ -1,0 +1,153 @@
+{
+  "puzzle_id": "CASE-M006",
+  "n": 4,
+  "suspects": [
+    "Mr. Green",
+    "Professor Plum",
+    "Dr. Orchid",
+    "Colonel Mustard"
+  ],
+  "weapons": [
+    "Rope",
+    "Dagger",
+    "Lead Pipe",
+    "Poison"
+  ],
+  "rooms": [
+    "Kitchen",
+    "Ballroom",
+    "Study",
+    "Greenhouse"
+  ],
+  "solution": {
+    "Mr. Green": {
+      "weapon": "Rope",
+      "room": "Ballroom"
+    },
+    "Professor Plum": {
+      "weapon": "Poison",
+      "room": "Kitchen"
+    },
+    "Dr. Orchid": {
+      "weapon": "Dagger",
+      "room": "Greenhouse"
+    },
+    "Colonel Mustard": {
+      "weapon": "Lead Pipe",
+      "room": "Study"
+    }
+  },
+  "murder_weapon": "Poison",
+  "culprit": "Professor Plum",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Study",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Professor Plum",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

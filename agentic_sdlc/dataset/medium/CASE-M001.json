@@ -1,0 +1,153 @@
+{
+  "puzzle_id": "CASE-M001",
+  "n": 4,
+  "suspects": [
+    "Mrs. Peacock",
+    "Dr. Orchid",
+    "Miss Scarlet",
+    "Lady Lavender"
+  ],
+  "weapons": [
+    "Dagger",
+    "Revolver",
+    "Poison",
+    "Lead Pipe"
+  ],
+  "rooms": [
+    "Ballroom",
+    "Library",
+    "Kitchen",
+    "Greenhouse"
+  ],
+  "solution": {
+    "Mrs. Peacock": {
+      "weapon": "Revolver",
+      "room": "Kitchen"
+    },
+    "Dr. Orchid": {
+      "weapon": "Poison",
+      "room": "Library"
+    },
+    "Miss Scarlet": {
+      "weapon": "Dagger",
+      "room": "Ballroom"
+    },
+    "Lady Lavender": {
+      "weapon": "Lead Pipe",
+      "room": "Greenhouse"
+    }
+  },
+  "murder_weapon": "Revolver",
+  "culprit": "Mrs. Peacock",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "weapon",
+      "b_val": "Poison",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Kitchen",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Miss Scarlet",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

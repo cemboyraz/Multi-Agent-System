@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E000",
+  "n": 3,
+  "suspects": [
+    "Reverend Gray",
+    "Dr. Orchid",
+    "Colonel Mustard"
+  ],
+  "weapons": [
+    "Lead Pipe",
+    "Revolver",
+    "Candlestick"
+  ],
+  "rooms": [
+    "Greenhouse",
+    "Kitchen",
+    "Conservatory"
+  ],
+  "solution": {
+    "Reverend Gray": {
+      "weapon": "Candlestick",
+      "room": "Kitchen"
+    },
+    "Dr. Orchid": {
+      "weapon": "Lead Pipe",
+      "room": "Conservatory"
+    },
+    "Colonel Mustard": {
+      "weapon": "Revolver",
+      "room": "Greenhouse"
+    }
+  },
+  "murder_weapon": "Revolver",
+  "culprit": "Colonel Mustard",
+  "clues": [
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Revolver",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Lead Pipe",
+      "b_cat": "room",
+      "b_val": "Kitchen",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "HYP-1",
+        "suspect": "Bilinmiyor",
+        "weapon": "Bilinmiyor",
+        "location": "Bilinmiyor",
+        "motive": "Bilinmiyor",
+        "analysis": "L\u00fctfen dosya i\u00e7eri\u011fini sa\u011flay\u0131n. Dosya i\u00e7eri\u011fi olmadan hipotez olu\u015fturamam.",
+        "comments": [
+            {
+                "author": "analyst",
+                "content": "Dosya i\u00e7eri\u011fi olmadan bir hipotez olu\u015fturmak imkans\u0131zd\u0131r. L\u00fctfen vaka dosyas\u0131n\u0131 sa\u011flay\u0131n.",
+                "assigned_to": "engineer"
+            },
+            {
+                "author": "engineer",
+                "content": "=== SAVUNMA YANITI ===\n\nSavunma makam\u0131 olarak, mevcut durumda bir hipotez olu\u015fturman\u0131n imkans\u0131zl\u0131\u011f\u0131n\u0131 vurgulamakla birlikte, dosya i\u00e7eri\u011fi olmadan dahi savc\u0131l\u0131k iddianamesinin temelsiz ve spek\u00fclatif oldu\u011funu belirtmek isteriz. Savc\u0131l\u0131k, somut deliller ve incelenmi\u015f bir hipotez olmaks\u0131z\u0131n yaln\u0131zca bir \"iddianame\" sunmaktad\u0131r. Bu durum, hukukun temel prensiplerine ayk\u0131r\u0131d\u0131r ve m\u00fcvekkilimin masumiyet karinesinden yararlanma hakk\u0131n\u0131 ihlal etmektedir.\n\nDosya i\u00e7eri\u011fi olmadan bir hipotez olu\u015fturulamayaca\u011f\u0131n\u0131 kabul etmekle birlikte, bu durumun savc\u0131l\u0131\u011f\u0131n elini kolunu ba\u011flamamas\u0131 gerekti\u011fini de ifade etmek isteriz. Bir su\u00e7un i\u015flendi\u011fi varsay\u0131ld\u0131\u011f\u0131nda, savc\u0131l\u0131\u011f\u0131n g\u00f6revi \u00f6ncelikle olay\u0131n t\u00fcm y\u00f6nlerini titizlikle incelemek ve ard\u0131ndan somut delillere dayal\u0131 bir hipotez olu\u015fturmakt\u0131r. Mevcut durumda, savc\u0131l\u0131\u011f\u0131n bu temel g\u00f6revini yerine getirmedi\u011fi a\u00e7\u0131kt\u0131r.\n\nHerhangi bir delilin veya tan\u0131k ifadesinin bulunmad\u0131\u011f\u0131 bu bo\u015flukta, savc\u0131l\u0131\u011f\u0131n sundu\u011fu \"iddianame\" yaln\u0131zca bir varsay\u0131md\u0131r. Bu varsay\u0131m\u0131n hi\u00e7bir hukuki dayana\u011f\u0131 bulunmamaktad\u0131r. Savc\u0131l\u0131k, m\u00fcvekkilimi su\u00e7lamadan \u00f6nce, su\u00e7u i\u015fledi\u011fine dair somut, do\u011frulanabilir ve \u00e7\u00fcr\u00fct\u00fclemez deliller sunmak zorundad\u0131r. Dosya i\u00e7eri\u011fi olmadan bir hipotez bile kurulam\u0131yorsa, ortada somut bir su\u00e7lama da olamaz.\n\nBu a\u015famada, savunma makam\u0131 olarak savc\u0131l\u0131\u011f\u0131n sundu\u011fu iddianamenin, hen\u00fcz delillendirilmemi\u015f, varsay\u0131msal bir durum \u00fczerine kurulu oldu\u011funu ve hukuki ge\u00e7erlili\u011finin bulunmad\u0131\u011f\u0131n\u0131 savunuyoruz. Savc\u0131l\u0131\u011f\u0131n, hukuki s\u00fcreci ba\u015flatmadan \u00f6nce, dosya i\u00e7eri\u011fini eksiksiz bir \u015fekilde sunmas\u0131 ve bu i\u00e7eri\u011fe dayal\u0131 olarak somut bir su\u00e7lama y\u00f6neltmesi gerekmektedir. Aksi takdirde, bu durum, adil yarg\u0131lanma hakk\u0131n\u0131n ihlali anlam\u0131na gelecektir.\n\n=== SAVUNMA \u00d6ZET\u0130 ===\n\nArg\u00fcman 1: Mevcut dosya i\u00e7eri\u011fi olmadan bir hipotez olu\u015fturulamamas\u0131, savc\u0131l\u0131\u011f\u0131n iddianamesinin temelsiz ve spek\u00fclatif oldu\u011funu g\u00f6stermektedir.\nArg\u00fcman 2: Savc\u0131l\u0131k, somut deliller ve incelenmi\u015f bir hipotez olmaks\u0131z\u0131n hukukun temel prensiplerine ayk\u0131r\u0131 bir \u015fekilde su\u00e7lama y\u00f6neltmektedir.\nArg\u00fcman 3: Savc\u0131l\u0131\u011f\u0131n, m\u00fcvekkilimi su\u00e7lamadan \u00f6nce, olay\u0131n t\u00fcm y\u00f6nlerini titizlikle inceleyerek somut delillere dayal\u0131 bir su\u00e7lama y\u00f6neltmesi gerekmektedir.",
+                "code": "",
+                "assigned_to": "validator"
+            },
+            {
+                "author": "validator",
+                "content": "=== JUDICIAL REVIEW ===\n\nThe detective theory is presented as an empty placeholder, explicitly stating that an analysis cannot be made without file content. The prosecutor's indictment mirrors this, stating that forming a hypothesis is impossible without the case file. The defense's response, while acknowledging the impossibility of forming a hypothesis without file content, strongly argues that the prosecutor's indictment is baseless and speculative precisely *because* there is no file content. The defense emphasizes that the prosecution cannot bring charges without concrete evidence and a properly formed hypothesis, and that the current situation violates the presumption of innocence.\n\nThe core issue here is the lack of any actual case file or evidence. The \"detective theory\" is not a theory at all, but a request for information. The prosecutor's \"indictment\" is similarly a statement of inability. The defense correctly points out that without any substance to review, any formal accusation is unfounded.\n\nThe detective theory, as presented, cannot be evaluated because it contains no actual theory. It is a null set. The prosecution's stance is also a null set regarding any actual accusation. The defense's argument is sound: without a case file and evidence, there can be no valid indictment or hypothesis. Therefore, the detective theory, in its current state, fails to present anything that can be scrutinized.\n\n=== FINAL VERDICT ===\nFAIL",
+                "status": "FAIL",
+                "assigned_to": "closed"
+            }
+        ],
+        "assigned_to": "closed"
+    }
+]

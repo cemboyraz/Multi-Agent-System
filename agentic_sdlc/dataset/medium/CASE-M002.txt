@@ -1,0 +1,26 @@
+A murder has been committed at the manor. There are 4 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Dr. Orchid, Lady Lavender, Mrs. Peacock, Professor Plum
+WEAPONS:  Poison, Crossbow, Revolver, Wrench
+ROOMS:    Greenhouse, Ballroom, Cellar, Billiard Room
+
+The victim was killed with the POISON. The murderer is therefore the suspect who carried the poison.
+
+CLUES (all clues are factually true):
+  1. Whoever was in the Ballroom also carried the wrench.
+  2. Lady Lavender did not carry the wrench.
+  3. Lady Lavender was not in the Cellar.
+  4. Mrs. Peacock was not in the Greenhouse.
+  5. Professor Plum did not carry the wrench.
+  6. Whoever carried the revolver did not go into the Cellar.
+  7. Dr. Orchid was not in the Billiard Room.
+  8. Whoever carried the revolver did not go into the Billiard Room.
+  9. Dr. Orchid was not in the Ballroom.
+  10. Professor Plum did not carry the crossbow.
+  11. Whoever carried the revolver did not go into the Ballroom.
+  12. Dr. Orchid was not in the Cellar.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Professor Plum", "weapon": "Poison", "room": "Cellar"}

@@ -1,0 +1,32 @@
+A murder has been committed at the manor. There are 5 suspects.
+Each suspect carried exactly ONE distinct weapon and was in exactly ONE distinct room. No two suspects share a weapon or a room.
+
+SUSPECTS: Miss Scarlet, Dr. Orchid, Colonel Mustard, Lady Lavender, Mrs. Peacock
+WEAPONS:  Crossbow, Lead Pipe, Candlestick, Rope, Revolver
+ROOMS:    Library, Greenhouse, Cellar, Study, Kitchen
+
+The victim was killed with the CROSSBOW. The murderer is therefore the suspect who carried the crossbow.
+
+CLUES (all clues are factually true):
+  1. Mrs. Peacock did not carry the candlestick.
+  2. Whoever carried the lead pipe did not go into the Kitchen.
+  3. Mrs. Peacock did not carry the revolver.
+  4. Dr. Orchid did not carry the candlestick.
+  5. Whoever was in the Greenhouse also carried the revolver.
+  6. Whoever carried the lead pipe did not go into the Study.
+  7. Colonel Mustard did not carry the crossbow.
+  8. Dr. Orchid was not in the Library.
+  9. Dr. Orchid did not carry the revolver.
+  10. Mrs. Peacock was not in the Cellar.
+  11. Lady Lavender was not in the Study.
+  12. Whoever was in the Kitchen also carried the candlestick.
+  13. Whoever carried the lead pipe did not go into the Cellar.
+  14. Mrs. Peacock did not carry the crossbow.
+  15. Whoever carried the rope did not go into the Study.
+  16. Lady Lavender did not carry the candlestick.
+  17. Lady Lavender was not in the Cellar.
+  18. Dr. Orchid was not in the Study.
+
+TASK: Using only the clues, deduce the complete arrangement (which weapon and which room belongs to each suspect) and identify the murderer.
+
+# GROUND TRUTH (not shown to solver): {"culprit": "Miss Scarlet", "weapon": "Crossbow", "room": "Study"}

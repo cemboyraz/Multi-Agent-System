@@ -1,0 +1,144 @@
+{
+  "puzzle_id": "CASE-M000",
+  "n": 4,
+  "suspects": [
+    "Colonel Mustard",
+    "Mr. Green",
+    "Mrs. Peacock",
+    "Reverend Gray"
+  ],
+  "weapons": [
+    "Poison",
+    "Candlestick",
+    "Revolver",
+    "Dagger"
+  ],
+  "rooms": [
+    "Greenhouse",
+    "Library",
+    "Ballroom",
+    "Cellar"
+  ],
+  "solution": {
+    "Colonel Mustard": {
+      "weapon": "Revolver",
+      "room": "Cellar"
+    },
+    "Mr. Green": {
+      "weapon": "Poison",
+      "room": "Greenhouse"
+    },
+    "Mrs. Peacock": {
+      "weapon": "Dagger",
+      "room": "Ballroom"
+    },
+    "Reverend Gray": {
+      "weapon": "Candlestick",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Revolver",
+  "culprit": "Colonel Mustard",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Library",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "room",
+      "b_val": "Library",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mr. Green",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

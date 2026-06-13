@@ -1,0 +1,3 @@
+```json
+{"culprit": "E1", "weapon": "Mutfak tipi bıçak", "room": "CEO Ofisi"}
+```

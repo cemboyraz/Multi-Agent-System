@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E004",
+  "n": 3,
+  "suspects": [
+    "Reverend Gray",
+    "Colonel Mustard",
+    "Dr. Orchid"
+  ],
+  "weapons": [
+    "Rope",
+    "Lead Pipe",
+    "Dagger"
+  ],
+  "rooms": [
+    "Billiard Room",
+    "Greenhouse",
+    "Library"
+  ],
+  "solution": {
+    "Reverend Gray": {
+      "weapon": "Lead Pipe",
+      "room": "Billiard Room"
+    },
+    "Colonel Mustard": {
+      "weapon": "Rope",
+      "room": "Greenhouse"
+    },
+    "Dr. Orchid": {
+      "weapon": "Dagger",
+      "room": "Library"
+    }
+  },
+  "murder_weapon": "Rope",
+  "culprit": "Colonel Mustard",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "pos",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Reverend Gray",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "room",
+      "b_val": "Billiard Room",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

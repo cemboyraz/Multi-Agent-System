@@ -1,0 +1,144 @@
+{
+  "puzzle_id": "CASE-M005",
+  "n": 4,
+  "suspects": [
+    "Mrs. Peacock",
+    "Dr. Orchid",
+    "Lady Lavender",
+    "Colonel Mustard"
+  ],
+  "weapons": [
+    "Crossbow",
+    "Candlestick",
+    "Poison",
+    "Rope"
+  ],
+  "rooms": [
+    "Conservatory",
+    "Ballroom",
+    "Cellar",
+    "Greenhouse"
+  ],
+  "solution": {
+    "Mrs. Peacock": {
+      "weapon": "Poison",
+      "room": "Conservatory"
+    },
+    "Dr. Orchid": {
+      "weapon": "Candlestick",
+      "room": "Greenhouse"
+    },
+    "Lady Lavender": {
+      "weapon": "Crossbow",
+      "room": "Cellar"
+    },
+    "Colonel Mustard": {
+      "weapon": "Rope",
+      "room": "Ballroom"
+    }
+  },
+  "murder_weapon": "Crossbow",
+  "culprit": "Lady Lavender",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Crossbow",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": true
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Greenhouse",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Ballroom",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Cellar",
+      "suspect": "",
+      "is_red_herring": true
+    },
+    {
+      "kind": "link",
+      "a_cat": "weapon",
+      "a_val": "Rope",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Candlestick",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Mrs. Peacock",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "weapon",
+      "b_val": "Crossbow",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Dr. Orchid",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Poison",
+      "b_cat": "room",
+      "b_val": "Greenhouse",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "medium"
+}

@@ -1,0 +1,83 @@
+{
+  "puzzle_id": "CASE-E008",
+  "n": 3,
+  "suspects": [
+    "Lady Lavender",
+    "Professor Plum",
+    "Colonel Mustard"
+  ],
+  "weapons": [
+    "Dagger",
+    "Candlestick",
+    "Wrench"
+  ],
+  "rooms": [
+    "Ballroom",
+    "Cellar",
+    "Billiard Room"
+  ],
+  "solution": {
+    "Lady Lavender": {
+      "weapon": "Candlestick",
+      "room": "Ballroom"
+    },
+    "Professor Plum": {
+      "weapon": "Dagger",
+      "room": "Cellar"
+    },
+    "Colonel Mustard": {
+      "weapon": "Wrench",
+      "room": "Billiard Room"
+    }
+  },
+  "murder_weapon": "Wrench",
+  "culprit": "Colonel Mustard",
+  "clues": [
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neglink",
+      "a_cat": "weapon",
+      "a_val": "Dagger",
+      "b_cat": "room",
+      "b_val": "Ballroom",
+      "suspect": "",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "weapon",
+      "a_val": "Wrench",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Lady Lavender",
+      "is_red_herring": false
+    },
+    {
+      "kind": "neg",
+      "a_cat": "room",
+      "a_val": "Cellar",
+      "b_cat": "",
+      "b_val": "",
+      "suspect": "Colonel Mustard",
+      "is_red_herring": false
+    },
+    {
+      "kind": "link",
+      "a_cat": "room",
+      "a_val": "Billiard Room",
+      "b_cat": "weapon",
+      "b_val": "Wrench",
+      "suspect": "",
+      "is_red_herring": false
+    }
+  ],
+  "difficulty": "easy"
+}

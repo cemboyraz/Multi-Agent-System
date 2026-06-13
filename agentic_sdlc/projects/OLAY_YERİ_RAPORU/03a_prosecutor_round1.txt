@@ -1,0 +1,46 @@
+=== PROSECUTION REVIEW ===
+
+The detective's conclusion points to E1 as the primary suspect, which aligns with a significant portion of the evidence. The motive suggested – preventing the exposure of financial irregularities – is plausible given the context of the "Internal Audit – Restricted" file accessed by the victim.
+
+**Clue Verification and Logic Assessment:**
+
+*   **Delil 1 (Bıçak):** E1's fingerprint on the knife is a strong indicator.
+*   **Delil 2 (Kahve Bardağı):** E1's DNA on the second coffee cup supports the idea of a meeting.
+*   **Delil 6 (DNA Bulgusu):** E1's DNA under the victim's fingernails strongly suggests a struggle and direct contact during the attack.
+*   **Delil 7 (Güvenlik Sistemi):** E1 having card access to the CEO's office is crucial, limiting the suspect pool.
+*   **Delil 8 (Telefon Mesajı):** Selim's message requesting a private meeting with E1 ("Tek başına gel. Kimse bilmemeli.") corroborates the detective's theory of a pre-arranged, clandestine meeting.
+*   **Delil 3 (Güvenlik Kamerası):** Two people entering at 21:40 (presumably Selim and E1) and one person leaving rapidly at 22:03 fits the timeline. The absence of a second exit record is noted.
+*   **Delil 4 (Ses Kaydı):** The dialogue "Bunu saklayamayacaksın" followed by a request to "Otur, konuşalım" and a chair sound strongly suggests a confrontation where Selim had discovered something incriminating about E1, and E1 attempted to de-escalate before resorting to violence.
+*   **Delil 5 (Bilgisayar Logları):** Selim's actions (opening and attempting to copy a restricted financial file) provide a clear basis for the motive and the confrontation.
+*   **Delil 9 (Oda Düzeni):** Minimum struggle, coffee consumed, overturned chair, and sudden attack all align with the narrative of a tense meeting escalating to violence.
+
+**Contradictions and Weaknesses:**
+
+1.  **The Second Exit:** The security camera footage shows one person leaving at 22:03. However, the case file states the second exit was not recorded. This is a significant gap. If only one person left at 22:03, who else could have left, or how did they leave undetected? The detective assumes the person leaving at 22:03 *is* E1, but there's no confirmation it was E1 specifically, only that *a* person left.
+2.  **Opportunity:** While E1 had card access, the timing of their departure is based solely on the single exit recorded at 22:03. The death occurred between 21:50 and 22:10. If E1 left at 22:03, they were present during the estimated time of death. However, the detective's logic implies E1 was the *only* one who could have left. The lack of a second exit record is problematic.
+3.  **Weapon Origin:** The knife is described as "Mutfak tipi bıçak." It's not explicitly stated that this knife belongs to the office kitchen or was brought by E1. While E1's fingerprint is on it, its origin is unconfirmed.
+4.  **"Saldırı ani ve kontrollüdür" (Sudden and controlled attack):** This statement from the investigation note seems slightly contradictory with "Sol bileğinde savunma çizikleri" (defense scratches on the left wrist). Defense scratches imply a struggle, which might not be considered entirely "controlled." However, the overall scene being minimally disturbed suggests the attack was swift and effective.
+
+**Motive and Opportunity Validation:**
+
+*   **Motive:** The motive is well-supported by Selim's actions with the financial files and the dialogue in the audio recording. E1 had a clear incentive to silence Selim.
+*   **Opportunity:** E1 had authorized access to the office and was present with the victim shortly before the estimated time of death. The single recorded exit at 22:03 places E1 at the scene during the window of death.
+
+**Case Status Determination:**
+
+The case against E1 is strong, supported by direct forensic evidence (fingerprints, DNA) and circumstantial evidence (phone messages, audio recordings, computer logs). However, the ambiguity surrounding the second exit from the building and the precise identity of the person seen leaving on camera introduces a degree of doubt. The detective's assumption that the 22:03 exit *is* E1, and that no one else left, needs further substantiation.
+
+=== PROSECUTION VERDICT ===
+{
+  "case_status": "WEAK",
+  "clue_match": "90%",
+  "weaknesses": [
+    "The security camera only shows one person leaving at 22:03, but there's no confirmation of the identity of this person as E1. It's an assumption.",
+    "The case file notes that a second exit was not recorded, which contradicts the implication that only one person left. This creates a significant gap in the timeline and egress.",
+    "The origin of the murder weapon (kitchen knife) is not specified; it could belong to the office or have been brought by the suspect.",
+    "The statement 'sudden and controlled attack' is slightly at odds with the presence of defense scratches on the victim's wrist, though the overall scene suggests a swift act."
+  ],
+  "contradictions": "The security camera footage showing only one exit at 22:03, coupled with the note that a second exit was not recorded, presents a logical inconsistency regarding how and when anyone else might have left the building.",
+  "recommendation": "The evidence strongly implicates E1, but the case requires further investigation to definitively confirm the identity of the person leaving the building at 22:03 and to account for any other potential exits or individuals. Additional investigation into the origin of the knife is also recommended. The current evidence is compelling but not entirely airtight due to the security footage ambiguity.",
+  "verdict_confidence": 0.85
+}

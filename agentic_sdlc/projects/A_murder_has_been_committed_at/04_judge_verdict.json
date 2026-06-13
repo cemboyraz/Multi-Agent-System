@@ -1,0 +1,4 @@
+{
+  "verdict": "GUILTY",
+  "reasoning": "=== JUDICIAL DECISION ===\n{\n  \"verdict\": \"GUILTY\",\n  \"conviction_certainty\": 0.99,\n  \"reasoning\": \"The detective's conclusion is logically sound and directly supported by the provided clues. The core of the deduction relies on Clue 1, which links the murder weapon (Revolver) to a specific room (Greenhouse). Clues 2 and 3 then systematically eliminate the other two suspects (Dr. Orchid and Reverend Gray) from being in the Greenhouse. As there are only three suspects and three rooms, and each susp"
+}
